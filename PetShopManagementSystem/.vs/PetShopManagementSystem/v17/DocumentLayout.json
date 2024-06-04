@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|e:\\summer 2024\\prn212\\project\\petshopmanagementsystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|e:\\summer 2024\\prn212\\project\\petshopmanagementsystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\Login.cs [Design]",
+              "RelativeToolTip": "Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:31:37.005Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:40:06.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Splash.cs [Design]",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\Splash.cs",
+              "RelativeDocumentMoniker": "Splash.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\Splash.cs [Design]",
+              "RelativeToolTip": "Splash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T01:45:46.716Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
