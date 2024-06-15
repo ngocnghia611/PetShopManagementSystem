@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace PetShopManagementSystem
 {
-    public partial class Login : Form
+    public partial class Employees : Form
     {
-        public Login()
+        public Employees()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Employees_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            txtUser.Text = string.Empty;
-            txtPass.Text = string.Empty;
+
         }
     }
 }

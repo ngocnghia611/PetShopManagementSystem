@@ -28,17 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtUser = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            label4 = new Label();
+            txtPass = new TextBox();
+            btnReset = new Label();
             panel2 = new Panel();
             label5 = new Label();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            btnLogin = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -73,14 +77,13 @@
             label1.Size = new Size(109, 27);
             label1.TabIndex = 0;
             label1.Text = "Pet Shop";
-            label1.Click += label1_Click;
             // 
-            // textBox1
+            // txtUser
             // 
-            textBox1.Location = new Point(64, 231);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(254, 32);
-            textBox1.TabIndex = 1;
+            txtUser.Location = new Point(64, 231);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(254, 32);
+            txtUser.TabIndex = 1;
             // 
             // label2
             // 
@@ -91,7 +94,6 @@
             label2.Size = new Size(111, 23);
             label2.TabIndex = 2;
             label2.Text = "UserName";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -102,35 +104,24 @@
             label3.Size = new Size(100, 23);
             label3.TabIndex = 4;
             label3.Text = "Password";
-            label3.Click += label3_Click;
             // 
-            // textBox2
+            // txtPass
             // 
-            textBox2.Location = new Point(64, 310);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(254, 32);
-            textBox2.TabIndex = 3;
+            txtPass.Location = new Point(64, 310);
+            txtPass.Name = "txtPass";
+            txtPass.Size = new Size(254, 32);
+            txtPass.TabIndex = 3;
             // 
-            // button1
+            // btnReset
             // 
-            button1.BackColor = Color.Crimson;
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(87, 374);
-            button1.Name = "button1";
-            button1.Size = new Size(176, 33);
-            button1.TabIndex = 5;
-            button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label4.Location = new Point(137, 425);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 21);
-            label4.TabIndex = 6;
-            label4.Text = "Reset";
+            btnReset.AutoSize = true;
+            btnReset.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
+            btnReset.Location = new Point(160, 427);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(60, 21);
+            btnReset.TabIndex = 6;
+            btnReset.Text = "Reset";
+            btnReset.Click += btnReset_Click;
             // 
             // panel2
             // 
@@ -151,19 +142,43 @@
             label5.TabIndex = 8;
             label5.Text = "Sign In";
             // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 35;
+            guna2Elipse1.TargetControl = this;
+            // 
+            // btnLogin
+            // 
+            btnLogin.BorderRadius = 10;
+            btnLogin.CustomizableEdges = customizableEdges3;
+            btnLogin.DisabledState.BorderColor = Color.DarkGray;
+            btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogin.FillColor = Color.Crimson;
+            btnLogin.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.Indigo;
+            btnLogin.Location = new Point(90, 366);
+            btnLogin.Name = "btnLogin";
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLogin.Size = new Size(196, 36);
+            btnLogin.TabIndex = 9;
+            btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(362, 486);
+            Controls.Add(btnLogin);
             Controls.Add(label5);
             Controls.Add(panel2);
-            Controls.Add(label4);
-            Controls.Add(button1);
+            Controls.Add(btnReset);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtPass);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtUser);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             FormBorderStyle = FormBorderStyle.None;
@@ -183,13 +198,14 @@
         private Panel panel1;
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox txtUser;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
-        private Button button1;
-        private Label label4;
+        private TextBox txtPass;
+        private Label btnReset;
         private Panel panel2;
         private Label label5;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
     }
 }

@@ -10,22 +10,12 @@ using System.Windows.Forms;
 
 namespace PetShopManagementSystem
 {
-    public partial class Login : Form
+    public partial class Homes : Form
     {
-        public Login()
+        public Homes()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            txtUser.Text = string.Empty;
-            txtPass.Text = string.Empty;
-        }
     }
 }
