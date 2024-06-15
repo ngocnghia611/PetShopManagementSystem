@@ -26,7 +26,6 @@ E:\Summer 2024\PRN212\Project\PetShopManagementSystem\bin\Debug\net8.0-windows\G
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\bin\Debug\net8.0-windows\System.Management.dll
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.csproj.AssemblyReference.cache
-E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Employees.resources
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Homes.resources
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Login.resources
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Properties.Resources.resources
@@ -43,3 +42,6 @@ E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\r
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.pdb
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.genruntimeconfig.cache
 E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\ref\PetShopManagementSystem.dll
+E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Employees.resources
+E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Customer.resources
+E:\Summer 2024\PRN212\Project\PetShopManagementSystem\obj\Debug\net8.0-windows\PetShopManagementSystem.Products.resources

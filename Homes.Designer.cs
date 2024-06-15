@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             label4 = new Label();
@@ -113,7 +113,7 @@
             guna2CircleProgressBar1.Location = new Point(681, 419);
             guna2CircleProgressBar1.Minimum = 0;
             guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleProgressBar1.Size = new Size(166, 166);
             guna2CircleProgressBar1.TabIndex = 9;
