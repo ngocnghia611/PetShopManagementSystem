@@ -41,15 +41,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            label2 = new Label();
-            pictureBox2 = new PictureBox();
-            label15 = new Label();
-            pictureBox7 = new PictureBox();
-            panel2 = new Panel();
-            guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnDelete = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
@@ -59,95 +66,29 @@
             label10 = new Label();
             label9 = new Label();
             label4 = new Label();
-            guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            label7 = new Label();
-            pictureBox12 = new PictureBox();
-            guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel8 = new Panel();
             label8 = new Label();
             pictureBox8 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            label6 = new Label();
-            pictureBox6 = new PictureBox();
-            label5 = new Label();
-            pictureBox5 = new PictureBox();
-            label1 = new Label();
             dgEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
             label11 = new Label();
             panel1 = new Panel();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            label14 = new Label();
-            pictureBox3 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            btnHome = new Guna.UI2.WinForms.Guna2Button();
+            btnEmployees = new Guna.UI2.WinForms.Guna2Button();
+            btnCustomer = new Guna.UI2.WinForms.Guna2Button();
+            btnBill = new Guna.UI2.WinForms.Guna2Button();
+            btnProduct = new Guna.UI2.WinForms.Guna2Button();
+            btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            label7 = new Label();
+            pictureBox7 = new PictureBox();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgEmployees).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Crimson;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(84, 293);
-            label2.Name = "label2";
-            label2.Size = new Size(117, 23);
-            label2.TabIndex = 36;
-            label2.Text = "Employees";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Crimson;
-            pictureBox2.Image = Properties.Resources.Home;
-            pictureBox2.Location = new Point(24, 285);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(44, 34);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 32;
-            pictureBox2.TabStop = false;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.Location = new Point(87, 225);
-            label15.Name = "label15";
-            label15.Size = new Size(84, 23);
-            label15.TabIndex = 37;
-            label15.Text = "Product";
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = Properties.Resources.Home;
-            pictureBox7.Location = new Point(12, 12);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(56, 44);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 35;
-            pictureBox7.TabStop = false;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.PaleVioletRed;
-            panel2.Location = new Point(12, 343);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(211, 55);
-            panel2.TabIndex = 31;
-            // 
-            // guna2Elipse3
-            // 
-            guna2Elipse3.BorderRadius = 40;
-            guna2Elipse3.TargetControl = panel2;
             // 
             // btnDelete
             // 
@@ -299,34 +240,6 @@
             label4.TabIndex = 5;
             label4.Text = "Name";
             // 
-            // guna2Elipse5
-            // 
-            guna2Elipse5.BorderRadius = 35;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(87, 22);
-            label7.Name = "label7";
-            label7.Size = new Size(112, 23);
-            label7.TabIndex = 34;
-            label7.Text = "EmpName";
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Image = Properties.Resources.Home;
-            pictureBox12.Location = new Point(27, 217);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(44, 34);
-            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox12.TabIndex = 33;
-            pictureBox12.TabStop = false;
-            // 
-            // guna2Elipse7
-            // 
-            guna2Elipse7.BorderRadius = 35;
-            // 
             // guna2Elipse4
             // 
             guna2Elipse4.BorderRadius = 35;
@@ -363,73 +276,13 @@
             // 
             // pictureBox8
             // 
-            pictureBox8.Image = Properties.Resources.Home;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(890, 6);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(46, 32);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 2;
             pictureBox8.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Home;
-            pictureBox1.Location = new Point(27, 116);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 48);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 44;
-            pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(87, 499);
-            label6.Name = "label6";
-            label6.Size = new Size(76, 23);
-            label6.TabIndex = 43;
-            label6.Text = "Logout";
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = Properties.Resources.Home;
-            pictureBox6.Location = new Point(27, 491);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(44, 34);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 42;
-            pictureBox6.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(87, 432);
-            label5.Name = "label5";
-            label5.Size = new Size(67, 23);
-            label5.TabIndex = 41;
-            label5.Text = "Billing";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.Home;
-            pictureBox5.Location = new Point(27, 424);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(44, 34);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 40;
-            pictureBox5.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(90, 130);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 34);
-            label1.TabIndex = 45;
-            label1.Text = "Home";
             // 
             // dgEmployees
             // 
@@ -513,31 +366,157 @@
             guna2Elipse1.BorderRadius = 35;
             guna2Elipse1.TargetControl = this;
             // 
-            // guna2Elipse6
+            // btnHome
             // 
-            guna2Elipse6.BorderRadius = 35;
+            btnHome.BorderRadius = 15;
+            btnHome.CustomizableEdges = customizableEdges13;
+            btnHome.DisabledState.BorderColor = Color.DarkGray;
+            btnHome.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnHome.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnHome.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnHome.FillColor = Color.Crimson;
+            btnHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHome.ForeColor = Color.White;
+            btnHome.Image = (Image)resources.GetObject("btnHome.Image");
+            btnHome.ImageAlign = HorizontalAlignment.Left;
+            btnHome.ImageSize = new Size(50, 50);
+            btnHome.Location = new Point(12, 112);
+            btnHome.Name = "btnHome";
+            btnHome.PressedDepth = 40;
+            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnHome.Size = new Size(211, 56);
+            btnHome.TabIndex = 38;
+            btnHome.Text = "Home";
             // 
-            // label14
+            // btnEmployees
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.PaleVioletRed;
-            label14.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(84, 360);
-            label14.Name = "label14";
-            label14.Size = new Size(119, 23);
-            label14.TabIndex = 47;
-            label14.Text = "Custormers";
+            btnEmployees.BorderRadius = 15;
+            btnEmployees.CustomizableEdges = customizableEdges15;
+            btnEmployees.DisabledState.BorderColor = Color.DarkGray;
+            btnEmployees.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEmployees.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEmployees.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEmployees.FillColor = Color.Crimson;
+            btnEmployees.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEmployees.ForeColor = Color.White;
+            btnEmployees.Image = (Image)resources.GetObject("btnEmployees.Image");
+            btnEmployees.ImageAlign = HorizontalAlignment.Left;
+            btnEmployees.ImageSize = new Size(30, 30);
+            btnEmployees.Location = new Point(12, 293);
+            btnEmployees.Name = "btnEmployees";
+            btnEmployees.PressedDepth = 40;
+            btnEmployees.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEmployees.Size = new Size(211, 56);
+            btnEmployees.TabIndex = 37;
+            btnEmployees.Text = "Employees";
             // 
-            // pictureBox3
+            // btnCustomer
             // 
-            pictureBox3.BackColor = Color.PaleVioletRed;
-            pictureBox3.Image = Properties.Resources.Home;
-            pictureBox3.Location = new Point(24, 352);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(44, 34);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 46;
-            pictureBox3.TabStop = false;
+            btnCustomer.BorderRadius = 15;
+            btnCustomer.CustomizableEdges = customizableEdges17;
+            btnCustomer.DisabledState.BorderColor = Color.DarkGray;
+            btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCustomer.FillColor = Color.Crimson;
+            btnCustomer.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCustomer.ForeColor = Color.White;
+            btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
+            btnCustomer.ImageAlign = HorizontalAlignment.Left;
+            btnCustomer.ImageSize = new Size(30, 30);
+            btnCustomer.Location = new Point(12, 380);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.PressedDepth = 40;
+            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnCustomer.Size = new Size(211, 56);
+            btnCustomer.TabIndex = 36;
+            btnCustomer.Text = "Customer";
+            // 
+            // btnBill
+            // 
+            btnBill.BorderRadius = 15;
+            btnBill.CustomizableEdges = customizableEdges19;
+            btnBill.DisabledState.BorderColor = Color.DarkGray;
+            btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBill.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBill.FillColor = Color.Crimson;
+            btnBill.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBill.ForeColor = Color.White;
+            btnBill.Image = (Image)resources.GetObject("btnBill.Image");
+            btnBill.ImageAlign = HorizontalAlignment.Left;
+            btnBill.ImageSize = new Size(30, 30);
+            btnBill.Location = new Point(12, 459);
+            btnBill.Name = "btnBill";
+            btnBill.PressedDepth = 40;
+            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnBill.Size = new Size(211, 56);
+            btnBill.TabIndex = 35;
+            btnBill.Text = "Billing";
+            // 
+            // btnProduct
+            // 
+            btnProduct.BorderRadius = 15;
+            btnProduct.CustomizableEdges = customizableEdges21;
+            btnProduct.DisabledState.BorderColor = Color.DarkGray;
+            btnProduct.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnProduct.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnProduct.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnProduct.FillColor = Color.Crimson;
+            btnProduct.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProduct.ForeColor = Color.White;
+            btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
+            btnProduct.ImageAlign = HorizontalAlignment.Left;
+            btnProduct.ImageSize = new Size(30, 30);
+            btnProduct.Location = new Point(12, 204);
+            btnProduct.Name = "btnProduct";
+            btnProduct.PressedDepth = 40;
+            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnProduct.Size = new Size(211, 56);
+            btnProduct.TabIndex = 34;
+            btnProduct.Text = "Product";
+            // 
+            // btnLogout
+            // 
+            btnLogout.BorderRadius = 15;
+            btnLogout.CustomizableEdges = customizableEdges23;
+            btnLogout.DisabledState.BorderColor = Color.DarkGray;
+            btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogout.FillColor = Color.Crimson;
+            btnLogout.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.WhiteSmoke;
+            btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
+            btnLogout.ImageAlign = HorizontalAlignment.Left;
+            btnLogout.ImageSize = new Size(30, 30);
+            btnLogout.Location = new Point(12, 541);
+            btnLogout.Name = "btnLogout";
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnLogout.Size = new Size(211, 56);
+            btnLogout.TabIndex = 33;
+            btnLogout.Text = "Logout";
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(100, 41);
+            label7.Name = "label7";
+            label7.Size = new Size(112, 23);
+            label7.TabIndex = 31;
+            label7.Text = "EmpName";
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(12, 12);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(82, 67);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 32;
+            pictureBox7.TabStop = false;
             // 
             // Customer
             // 
@@ -545,51 +524,31 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
             ClientSize = new Size(1249, 667);
-            Controls.Add(label14);
-            Controls.Add(pictureBox3);
-            Controls.Add(label2);
-            Controls.Add(label15);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox2);
-            Controls.Add(panel2);
+            Controls.Add(btnHome);
+            Controls.Add(btnEmployees);
+            Controls.Add(btnCustomer);
+            Controls.Add(btnBill);
+            Controls.Add(btnProduct);
+            Controls.Add(btnLogout);
             Controls.Add(label7);
-            Controls.Add(pictureBox12);
-            Controls.Add(pictureBox1);
-            Controls.Add(label6);
-            Controls.Add(pictureBox6);
-            Controls.Add(label5);
-            Controls.Add(pictureBox5);
-            Controls.Add(label1);
+            Controls.Add(pictureBox7);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Customer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Customer";
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgEmployees).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label2;
-        private PictureBox pictureBox2;
-        private Label label15;
-        private PictureBox pictureBox7;
-        private Panel panel2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private Guna.UI2.WinForms.Guna2Button btnSave;
@@ -599,27 +558,22 @@
         private Label label10;
         private Label label9;
         private Label label4;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
-        private Label label7;
-        private PictureBox pictureBox12;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Panel panel8;
         private Label label8;
         private PictureBox pictureBox8;
-        private PictureBox pictureBox1;
-        private Label label6;
-        private PictureBox pictureBox6;
-        private Label label5;
-        private PictureBox pictureBox5;
-        private Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView dgEmployees;
         private Label label11;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Label label14;
-        private PictureBox pictureBox3;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
+        private Guna.UI2.WinForms.Guna2Button btnEmployees;
+        private Guna.UI2.WinForms.Guna2Button btnCustomer;
+        private Guna.UI2.WinForms.Guna2Button btnBill;
+        private Guna.UI2.WinForms.Guna2Button btnProduct;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Label label7;
+        private PictureBox pictureBox7;
     }
 }

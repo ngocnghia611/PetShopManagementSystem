@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
+            loadPercent = new Label();
             label3 = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            myProcess = new Guna.UI2.WinForms.Guna2ProgressBar();
+            timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.cho2;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 190);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 70);
@@ -53,22 +55,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(131, 48);
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(77, 53);
             label1.Name = "label1";
-            label1.Size = new Size(307, 23);
+            label1.Size = new Size(427, 34);
             label1.TabIndex = 2;
             label1.Text = "Pet Shop Management System";
             // 
-            // label2
+            // loadPercent
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(263, 120);
-            label2.Name = "label2";
-            label2.Size = new Size(44, 23);
-            label2.TabIndex = 3;
-            label2.Text = "%%";
+            loadPercent.AutoSize = true;
+            loadPercent.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loadPercent.Location = new Point(263, 120);
+            loadPercent.Name = "loadPercent";
+            loadPercent.Size = new Size(44, 23);
+            loadPercent.TabIndex = 3;
+            loadPercent.Text = "%%";
             // 
             // label3
             // 
@@ -85,17 +87,21 @@
             guna2Elipse1.BorderRadius = 35;
             guna2Elipse1.TargetControl = this;
             // 
-            // guna2ProgressBar1
+            // myProcess
             // 
-            guna2ProgressBar1.BorderRadius = 8;
-            guna2ProgressBar1.CustomizableEdges = customizableEdges1;
-            guna2ProgressBar1.Location = new Point(166, 240);
-            guna2ProgressBar1.Name = "guna2ProgressBar1";
-            guna2ProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ProgressBar1.Size = new Size(375, 20);
-            guna2ProgressBar1.TabIndex = 5;
-            guna2ProgressBar1.Text = "guna2ProgressBar1";
-            guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            myProcess.BorderRadius = 8;
+            myProcess.CustomizableEdges = customizableEdges1;
+            myProcess.Location = new Point(166, 240);
+            myProcess.Name = "myProcess";
+            myProcess.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            myProcess.Size = new Size(375, 20);
+            myProcess.TabIndex = 5;
+            myProcess.Text = "guna2ProgressBar1";
+            myProcess.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // timer
+            // 
+            timer.Tick += timer_Tick;
             // 
             // Splash
             // 
@@ -103,9 +109,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
             ClientSize = new Size(572, 307);
-            Controls.Add(guna2ProgressBar1);
+            Controls.Add(myProcess);
             Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(loadPercent);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -123,9 +129,10 @@
 
         private PictureBox pictureBox1;
         private Label label1;
-        private Label label2;
+        private Label loadPercent;
         private Label label3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
+        private Guna.UI2.WinForms.Guna2ProgressBar myProcess;
+        private System.Windows.Forms.Timer timer;
     }
 }

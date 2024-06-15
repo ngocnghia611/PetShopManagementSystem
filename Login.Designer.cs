@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
             txtUser = new TextBox();
             label2 = new Label();
@@ -43,6 +43,7 @@
             label5 = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -58,25 +59,15 @@
             panel1.Size = new Size(362, 125);
             panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.cho2;
-            pictureBox1.Location = new Point(160, 59);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(50, 43);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(137, 20);
+            label1.Location = new Point(62, 20);
             label1.Name = "label1";
-            label1.Size = new Size(109, 27);
+            label1.Size = new Size(268, 27);
             label1.TabIndex = 0;
-            label1.Text = "Pet Shop";
+            label1.Text = "Pet Shop Management";
             // 
             // txtUser
             // 
@@ -150,7 +141,7 @@
             // btnLogin
             // 
             btnLogin.BorderRadius = 10;
-            btnLogin.CustomizableEdges = customizableEdges3;
+            btnLogin.CustomizableEdges = customizableEdges1;
             btnLogin.DisabledState.BorderColor = Color.DarkGray;
             btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -160,11 +151,21 @@
             btnLogin.ForeColor = Color.Indigo;
             btnLogin.Location = new Point(90, 366);
             btnLogin.Name = "btnLogin";
-            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnLogin.Size = new Size(196, 36);
             btnLogin.TabIndex = 9;
             btnLogin.Text = "Login";
             btnLogin.Click += btnLogin_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(145, 50);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(101, 75);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -197,7 +198,6 @@
 
         private Panel panel1;
         private Label label1;
-        private PictureBox pictureBox1;
         private TextBox txtUser;
         private Label label2;
         private Label label3;
@@ -207,5 +207,6 @@
         private Label label5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private PictureBox pictureBox1;
     }
 }

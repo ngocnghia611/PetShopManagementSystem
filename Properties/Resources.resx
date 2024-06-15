@@ -121,19 +121,31 @@
   <data name="cho2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cho2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="meoden" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\meoden.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pet-shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pet-shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chohusky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chohusky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot-2023-04-12-093934" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot-2023-04-12-093934.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="meoden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meoden.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cho21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cho21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot-2023-04-12-093934" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot-2023-04-12-093934.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pet-shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pet-shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
