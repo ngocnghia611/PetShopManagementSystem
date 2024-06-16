@@ -81,6 +81,7 @@
             dgvProductBill = new Guna.UI2.WinForms.Guna2DataGridView();
             dgvTransactions = new Guna.UI2.WinForms.Guna2DataGridView();
             panel2 = new Panel();
+            pictureBox3 = new PictureBox();
             txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             label5 = new Label();
             txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -94,6 +95,7 @@
             dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
             label11 = new Label();
             panel8 = new Panel();
+            pictureBox2 = new PictureBox();
             txtCustomerID = new ComboBox();
             txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             label10 = new Label();
@@ -104,19 +106,17 @@
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProductBill).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // btnHome
@@ -140,6 +140,7 @@
             btnHome.Size = new Size(211, 56);
             btnHome.TabIndex = 47;
             btnHome.Text = "Home";
+            btnHome.Click += btnHome_Click;
             // 
             // btnEmployees
             // 
@@ -162,6 +163,7 @@
             btnEmployees.Size = new Size(211, 56);
             btnEmployees.TabIndex = 46;
             btnEmployees.Text = "Employees";
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnCustomer
             // 
@@ -184,6 +186,7 @@
             btnCustomer.Size = new Size(211, 56);
             btnCustomer.TabIndex = 45;
             btnCustomer.Text = "Customer";
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // btnBill
             // 
@@ -206,6 +209,7 @@
             btnBill.Size = new Size(211, 56);
             btnBill.TabIndex = 44;
             btnBill.Text = "Billing";
+            btnBill.Click += btnBill_Click;
             // 
             // btnProduct
             // 
@@ -228,6 +232,7 @@
             btnProduct.Size = new Size(211, 56);
             btnProduct.TabIndex = 43;
             btnProduct.Text = "Product";
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnLogout
             // 
@@ -459,6 +464,16 @@
             panel2.Size = new Size(542, 174);
             panel2.TabIndex = 23;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(491, 6);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(38, 29);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 24;
+            pictureBox3.TabStop = false;
+            // 
             // txtQuantity
             // 
             txtQuantity.CustomizableEdges = customizableEdges15;
@@ -580,6 +595,7 @@
             btnReset.Size = new Size(136, 39);
             btnReset.TabIndex = 19;
             btnReset.Text = "Reset";
+            btnReset.Click += btnReset_Click;
             // 
             // pictureBox1
             // 
@@ -686,6 +702,16 @@
             panel8.Size = new Size(542, 127);
             panel8.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(491, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(38, 29);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 23;
+            pictureBox2.TabStop = false;
+            // 
             // txtCustomerID
             // 
             txtCustomerID.FormattingEnabled = true;
@@ -775,26 +801,6 @@
             guna2Elipse3.BorderRadius = 35;
             guna2Elipse3.TargetControl = panel2;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(491, 9);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(38, 29);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 23;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(491, 6);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(38, 29);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 24;
-            pictureBox3.TabStop = false;
-            // 
             // Billings
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -821,13 +827,13 @@
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

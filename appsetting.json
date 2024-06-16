@@ -1,0 +1,14 @@
+{
+  "Authentication": {
+    "Users": [
+      {
+        "Username": "admin",
+        "Password": "admin@123"
+      },
+      {
+        "Username": "user",
+        "Password": "user@123"
+      }
+    ]
+  }
+}

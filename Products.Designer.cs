@@ -59,13 +59,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel8 = new Panel();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            txtCategory = new ComboBox();
             btnDelete = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             label10 = new Label();
             label9 = new Label();
             label4 = new Label();
@@ -96,13 +96,13 @@
             // 
             panel8.BackColor = Color.White;
             panel8.Controls.Add(label3);
-            panel8.Controls.Add(comboBox1);
+            panel8.Controls.Add(txtCategory);
             panel8.Controls.Add(btnDelete);
             panel8.Controls.Add(btnEdit);
             panel8.Controls.Add(btnSave);
             panel8.Controls.Add(txtName);
-            panel8.Controls.Add(txtPhone);
-            panel8.Controls.Add(txtAddress);
+            panel8.Controls.Add(txtPrice);
+            panel8.Controls.Add(txtQuantity);
             panel8.Controls.Add(label10);
             panel8.Controls.Add(label9);
             panel8.Controls.Add(label4);
@@ -123,13 +123,13 @@
             label3.TabIndex = 22;
             label3.Text = "Category";
             // 
-            // comboBox1
+            // txtCategory
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(252, 75);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(215, 28);
-            comboBox1.TabIndex = 21;
+            txtCategory.FormattingEnabled = true;
+            txtCategory.Location = new Point(252, 75);
+            txtCategory.Name = "txtCategory";
+            txtCategory.Size = new Size(215, 28);
+            txtCategory.TabIndex = 21;
             // 
             // btnDelete
             // 
@@ -209,47 +209,47 @@
             txtName.Size = new Size(214, 28);
             txtName.TabIndex = 15;
             // 
-            // txtPhone
+            // txtPrice
             // 
-            txtPhone.CustomizableEdges = customizableEdges33;
-            txtPhone.DefaultText = "";
-            txtPhone.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPhone.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPhone.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPhone.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPhone.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPhone.Font = new Font("Segoe UI", 9F);
-            txtPhone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPhone.Location = new Point(726, 75);
-            txtPhone.Margin = new Padding(3, 4, 3, 4);
-            txtPhone.Name = "txtPhone";
-            txtPhone.PasswordChar = '\0';
-            txtPhone.PlaceholderText = "";
-            txtPhone.SelectedText = "";
-            txtPhone.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            txtPhone.Size = new Size(215, 28);
-            txtPhone.TabIndex = 13;
+            txtPrice.CustomizableEdges = customizableEdges33;
+            txtPrice.DefaultText = "";
+            txtPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPrice.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPrice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPrice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPrice.Font = new Font("Segoe UI", 9F);
+            txtPrice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPrice.Location = new Point(726, 75);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Name = "txtPrice";
+            txtPrice.PasswordChar = '\0';
+            txtPrice.PlaceholderText = "";
+            txtPrice.SelectedText = "";
+            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            txtPrice.Size = new Size(215, 28);
+            txtPrice.TabIndex = 13;
             // 
-            // txtAddress
+            // txtQuantity
             // 
-            txtAddress.CustomizableEdges = customizableEdges35;
-            txtAddress.DefaultText = "";
-            txtAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtAddress.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtAddress.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtAddress.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAddress.Font = new Font("Segoe UI", 9F);
-            txtAddress.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAddress.Location = new Point(488, 75);
-            txtAddress.Margin = new Padding(3, 4, 3, 4);
-            txtAddress.Name = "txtAddress";
-            txtAddress.PasswordChar = '\0';
-            txtAddress.PlaceholderText = "";
-            txtAddress.SelectedText = "";
-            txtAddress.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            txtAddress.Size = new Size(215, 28);
-            txtAddress.TabIndex = 12;
+            txtQuantity.CustomizableEdges = customizableEdges35;
+            txtQuantity.DefaultText = "";
+            txtQuantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtQuantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtQuantity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtQuantity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtQuantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuantity.Font = new Font("Segoe UI", 9F);
+            txtQuantity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuantity.Location = new Point(488, 75);
+            txtQuantity.Margin = new Padding(3, 4, 3, 4);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.PasswordChar = '\0';
+            txtQuantity.PlaceholderText = "";
+            txtQuantity.SelectedText = "";
+            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txtQuantity.Size = new Size(215, 28);
+            txtQuantity.TabIndex = 12;
             // 
             // label10
             // 
@@ -409,6 +409,7 @@
             btnHome.Size = new Size(211, 56);
             btnHome.TabIndex = 56;
             btnHome.Text = "Home";
+            btnHome.Click += btnHome_Click;
             // 
             // btnEmployees
             // 
@@ -431,6 +432,7 @@
             btnEmployees.Size = new Size(211, 56);
             btnEmployees.TabIndex = 55;
             btnEmployees.Text = "Employees";
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnCustomer
             // 
@@ -453,6 +455,7 @@
             btnCustomer.Size = new Size(211, 56);
             btnCustomer.TabIndex = 54;
             btnCustomer.Text = "Customer";
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // btnBill
             // 
@@ -475,6 +478,7 @@
             btnBill.Size = new Size(211, 56);
             btnBill.TabIndex = 53;
             btnBill.Text = "Billing";
+            btnBill.Click += btnBill_Click;
             // 
             // btnProduct
             // 
@@ -497,6 +501,7 @@
             btnProduct.Size = new Size(211, 56);
             btnProduct.TabIndex = 52;
             btnProduct.Text = "Product";
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnLogout
             // 
@@ -576,8 +581,8 @@
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Label label10;
         private Label label4;
         private Label label8;
@@ -589,7 +594,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Label label3;
-        private ComboBox comboBox1;
+        private ComboBox txtCategory;
         private Label label9;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnEmployees;

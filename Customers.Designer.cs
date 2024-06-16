@@ -387,6 +387,7 @@
             btnHome.Size = new Size(211, 56);
             btnHome.TabIndex = 38;
             btnHome.Text = "Home";
+            btnHome.Click += btnHome_Click;
             // 
             // btnEmployees
             // 
@@ -409,6 +410,7 @@
             btnEmployees.Size = new Size(211, 56);
             btnEmployees.TabIndex = 37;
             btnEmployees.Text = "Employees";
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnCustomer
             // 
@@ -431,6 +433,7 @@
             btnCustomer.Size = new Size(211, 56);
             btnCustomer.TabIndex = 36;
             btnCustomer.Text = "Customer";
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // btnBill
             // 
@@ -453,6 +456,7 @@
             btnBill.Size = new Size(211, 56);
             btnBill.TabIndex = 35;
             btnBill.Text = "Billing";
+            btnBill.Click += btnBill_Click;
             // 
             // btnProduct
             // 
@@ -475,6 +479,7 @@
             btnProduct.Size = new Size(211, 56);
             btnProduct.TabIndex = 34;
             btnProduct.Text = "Product";
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnLogout
             // 

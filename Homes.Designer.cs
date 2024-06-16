@@ -47,12 +47,15 @@
             guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             label4 = new Label();
             panel11 = new Panel();
+            label3 = new Label();
             label14 = new Label();
             pictureBox11 = new PictureBox();
             panel10 = new Panel();
+            label1 = new Label();
             label13 = new Label();
             pictureBox10 = new PictureBox();
             panel9 = new Panel();
+            label2 = new Label();
             label12 = new Label();
             pictureBox9 = new PictureBox();
             label11 = new Label();
@@ -65,7 +68,6 @@
             label7 = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -76,9 +78,6 @@
             btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             btnEmployees = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             panel1.SuspendLayout();
             guna2CircleProgressBar1.SuspendLayout();
             panel11.SuspendLayout();
@@ -144,6 +143,17 @@
             panel11.Size = new Size(450, 117);
             panel11.TabIndex = 8;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.Info;
+            label3.Location = new Point(122, 58);
+            label3.Name = "label3";
+            label3.Size = new Size(32, 23);
+            label3.TabIndex = 11;
+            label3.Text = "RS";
+            // 
             // label14
             // 
             label14.AutoSize = true;
@@ -175,6 +185,17 @@
             panel10.Size = new Size(428, 117);
             panel10.TabIndex = 8;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Info;
+            label1.Location = new Point(126, 51);
+            label1.Name = "label1";
+            label1.Size = new Size(32, 23);
+            label1.TabIndex = 9;
+            label1.Text = "RS";
+            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -205,6 +226,17 @@
             panel9.Name = "panel9";
             panel9.Size = new Size(428, 117);
             panel9.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.Info;
+            label2.Location = new Point(121, 58);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 23);
+            label2.TabIndex = 10;
+            label2.Text = "RS";
             // 
             // label12
             // 
@@ -318,10 +350,6 @@
             guna2Elipse2.BorderRadius = 35;
             guna2Elipse2.TargetControl = panel1;
             // 
-            // guna2Elipse3
-            // 
-            guna2Elipse3.BorderRadius = 40;
-            // 
             // guna2Elipse4
             // 
             guna2Elipse4.BorderRadius = 35;
@@ -385,6 +413,7 @@
             btnProduct.Size = new Size(211, 56);
             btnProduct.TabIndex = 14;
             btnProduct.Text = "Product";
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnBill
             // 
@@ -407,6 +436,7 @@
             btnBill.Size = new Size(211, 56);
             btnBill.TabIndex = 15;
             btnBill.Text = "Billing";
+            btnBill.Click += btnBill_Click;
             // 
             // btnCustomer
             // 
@@ -429,6 +459,7 @@
             btnCustomer.Size = new Size(211, 56);
             btnCustomer.TabIndex = 16;
             btnCustomer.Text = "Customer";
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // btnEmployees
             // 
@@ -451,6 +482,7 @@
             btnEmployees.Size = new Size(211, 56);
             btnEmployees.TabIndex = 17;
             btnEmployees.Text = "Employees";
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnHome
             // 
@@ -473,39 +505,7 @@
             btnHome.Size = new Size(211, 56);
             btnHome.TabIndex = 18;
             btnHome.Text = "Home";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.Info;
-            label1.Location = new Point(126, 51);
-            label1.Name = "label1";
-            label1.Size = new Size(32, 23);
-            label1.TabIndex = 9;
-            label1.Text = "RS";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.Info;
-            label2.Location = new Point(121, 58);
-            label2.Name = "label2";
-            label2.Size = new Size(32, 23);
-            label2.TabIndex = 10;
-            label2.Text = "RS";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.Info;
-            label3.Location = new Point(122, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(32, 23);
-            label3.TabIndex = 11;
-            label3.Text = "RS";
+            btnHome.Click += btnHome_Click;
             // 
             // Homes
             // 
@@ -570,7 +570,6 @@
         private PictureBox pictureBox11;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Label label5;
         private PictureBox pictureBox5;
         private Label label3;

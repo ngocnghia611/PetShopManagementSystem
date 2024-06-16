@@ -15,6 +15,39 @@ namespace PetShopManagementSystem
         public Customer()
         {
             InitializeComponent();
+        } 
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Homes homes = new Homes();
+            homes.Show();
+            this.Hide();
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            Products products = new Products();
+            products.Show(); 
+            this.Hide();
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            Employees employees = new Employees();
+            employees.Show();
+            this.Hide();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            Billings billings = new Billings();
+            billings.Show();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -26,6 +59,13 @@ namespace PetShopManagementSystem
                 Login login = new Login();
                 login.ShowDialog();
             }
+        }
+
+        private void ClearInput()
+        {
+            txtName.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtPhone.Text = string.Empty;
         }
     }
 }
