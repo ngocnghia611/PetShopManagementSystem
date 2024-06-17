@@ -270,9 +270,9 @@
             label8.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label8.Location = new Point(14, 15);
             label8.Name = "label8";
-            label8.Size = new Size(117, 23);
+            label8.Size = new Size(113, 23);
             label8.TabIndex = 3;
-            label8.Text = "Employees";
+            label8.Text = "Customers";
             // 
             // pictureBox8
             // 
