@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\PetShopManagementSystem.csproj": {}
+    "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\PetShopManagementSystem.csproj": {}
   },
   "projects": {
-    "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\PetShopManagementSystem.csproj": {
+    "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\PetShopManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\PetShopManagementSystem.csproj",
+        "projectUniqueName": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\PetShopManagementSystem.csproj",
         "projectName": "PetShopManagementSystem",
-        "projectPath": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\PetShopManagementSystem.csproj",
+        "projectPath": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\PetShopManagementSystem.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Summer 2024\\PRN212\\Project\\PetShopManagementSystem\\obj\\",
+        "outputPath": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

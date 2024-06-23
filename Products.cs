@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShopManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,16 +8,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PetShopManagementSystem
 {
     public partial class Products : Form
     {
+        private PetShopManagenentContext context;
         public Products()
         {
             InitializeComponent();
+            context = new PetShopManagenentContext();
         }
 
+        public void LoadProduct()
+        {
+            try
+            {
+                var product = context.Products.Select(p => new
+                {
+                    p.ProductId,
+                    p.ProductName,
+                    p.Category,
+                    p.Quantity,
+                    p.Price
+                }).ToList();
+
+                dgvProduct.DataSource = product;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void Products_Load(object sender, EventArgs e)
+        {
+            LoadProduct();
+            ClearInput();
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
             Homes homes = new Homes();
@@ -45,7 +74,7 @@ namespace PetShopManagementSystem
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            Billings billings = new Billings(); 
+            Billings billings = new Billings();
             billings.Show();
             this.Hide();
         }
@@ -63,9 +92,127 @@ namespace PetShopManagementSystem
         private void ClearInput()
         {
             txtName.Text = string.Empty;
-            txtCategory.Text = string.Empty;
+            txtCategory.SelectedIndex = 0;
             txtQuantity.Text = string.Empty;
             txtPrice.Text = string.Empty;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "" || txtCategory.SelectedIndex == -1 || txtQuantity.Text == "" || txtPrice.Text == "")
+            {
+                MessageBox.Show("Missing Information!!");
+            }
+            else
+            {
+                try
+                {
+                    var newProduct = new Product
+                    {
+                        ProductName = txtName.Text,
+                        Category = txtCategory.SelectedItem.ToString(),
+                        Quantity = int.Parse(txtQuantity.Text),
+                        Price = int.Parse(txtPrice.Text)
+                    };
+
+                    context.Products.Add(newProduct);
+                    context.SaveChanges();
+                    LoadProduct();
+                    ClearInput();
+                    MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "" || txtCategory.Text == "" || txtQuantity.Text == "" || txtPrice.Text == "")
+            {
+                MessageBox.Show("Missing Information!!");
+            }
+            else
+            {
+                try
+                {
+                    if (dgvProduct.SelectedRows.Count > 0)
+                    {
+                        int productId = int.Parse(dgvProduct.SelectedRows[0].Cells["ProductId"].Value.ToString());
+                        var product = context.Products.Find(productId);
+                        if (product != null)
+                        {
+                            product.ProductName = txtName.Text;
+                            product.Category = txtCategory.Text;
+                            product.Quantity = int.Parse(txtQuantity.Text);
+                            product.Price = int.Parse(txtPrice.Text);
+
+                            context.SaveChanges();
+                            LoadProduct();
+                            ClearInput();
+                            MessageBox.Show("Product updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a product to update.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "" || txtCategory.Text == "" || txtQuantity.Text == "" || txtPrice.Text == "")
+            {
+                MessageBox.Show("Missing Information!!");
+            }
+            else
+            {
+                try
+                {
+                    if (dgvProduct.SelectedRows.Count > 0)
+                    {
+                        int productId = int.Parse(dgvProduct.SelectedRows[0].Cells["ProductId"].Value.ToString());
+                        var product = context.Products.Find(productId);
+                        if (product != null)
+                        {
+                            context.Products.Remove(product);
+                            context.SaveChanges();
+                            LoadProduct();
+                            ClearInput();
+                            MessageBox.Show("Product deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a product to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvProduct.SelectedRows.Count > 0)
+            {
+                var selectedRow = dgvProduct.SelectedRows[0];
+                txtName.Text = selectedRow.Cells["ProductName"].Value.ToString();
+                txtCategory.Text = selectedRow.Cells["Category"].Value.ToString();
+                txtQuantity.Text = selectedRow.Cells["Quantity"].Value.ToString();
+                txtPrice.Text = selectedRow.Cells["Price"].Value.ToString();
+            }
         }
     }
 }

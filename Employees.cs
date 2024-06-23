@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using PetShopManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,39 @@ namespace PetShopManagementSystem
 {
     public partial class Employees : Form
     {
+        private PetShopManagenentContext dbContext;
         public Employees()
         {
             InitializeComponent();
+            dbContext = new PetShopManagenentContext();
+        }
+
+        public void LoadEmployees()
+        {
+            try
+            {
+                var employees = dbContext.Employees.Select(e => new
+                {
+                    e.EmpId,
+                    e.EmpName,
+                    e.EmpAddress,
+                    EmpDob = e.EmpDob.ToString("yyyy-MM-dd"),
+                    e.EmpPhone,
+                    e.EmpPass
+                }).ToList();
+
+                dgvEmployees.DataSource = employees;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Employees_Load(object sender, EventArgs e)
+        {
+            LoadEmployees();
+            ClearInput();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -60,13 +92,140 @@ namespace PetShopManagementSystem
                 login.ShowDialog();
             }
         }
-        
+
         private void ClearInput()
         {
             txtName.Text = string.Empty;
             txtAddress.Text = string.Empty;
             txtPhone.Text = string.Empty;
             txtPass.Text = string.Empty;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtName.Text == "" || txtAddress.Text == "" || txtDateOfBirth.Text == "" || txtPhone.Text == "" || txtPass.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    var employee = new Employee
+                    {
+                        EmpName = txtName.Text,
+                        EmpAddress = txtAddress.Text,
+                        EmpDob = DateOnly.Parse(txtDateOfBirth.Text),
+                        EmpPhone = txtPhone.Text,
+                        EmpPass = txtPass.Text
+                    };
+
+                    dbContext.Employees.Add(employee);
+                    dbContext.SaveChanges();
+                    MessageBox.Show("Employee added successfully!");
+                    LoadEmployees();
+                    ClearInput();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "" || txtAddress.Text == "" || txtDateOfBirth.Text == "" || txtPhone.Text == "" || txtPass.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    if (dgvEmployees.SelectedRows.Count > 0)
+                    {
+                        int empId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmpId"].Value);
+                        var employee = dbContext.Employees.FirstOrDefault(emp => emp.EmpId == empId);
+
+                        if (employee != null)
+                        {
+                            employee.EmpName = txtName.Text;
+                            employee.EmpAddress = txtAddress.Text;
+                            employee.EmpDob = DateOnly.Parse(txtDateOfBirth.Text); // Assuming txtDateOfBirth is a TextBox containing date as string
+                            employee.EmpPhone = txtPhone.Text;
+                            employee.EmpPass = txtPass.Text;
+
+                            dbContext.SaveChanges();
+                            MessageBox.Show("Employee updated successfully!");
+                            LoadEmployees(); // Method to refresh the DataGridView
+                            ClearInput(); // Method to clear input fields
+                        }
+                        else
+                        {
+                            MessageBox.Show("Employee not found.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select an employee to edit.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvEmployees.SelectedRows.Count > 0)
+                {
+                    int empId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmpId"].Value);
+                    var employee = dbContext.Employees
+                                          .Include(emp => emp.Bills)  // Bao gồm thông tin hóa đơn liên quan
+                                          .FirstOrDefault(emp => emp.EmpId == empId);
+
+                    if (employee != null)
+                    {
+                        // Xóa hóa đơn của nhân viên trước
+                        dbContext.Bills.RemoveRange(employee.Bills);
+
+                        // Sau đó mới xóa nhân viên
+                        dbContext.Employees.Remove(employee);
+                        dbContext.SaveChanges();
+                        MessageBox.Show("Employee deleted successfully!");
+                        LoadEmployees();
+                        ClearInput();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select an employee to delete.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedRows.Count > 0)
+            {
+                var selectedRow = dgvEmployees.SelectedRows[0];
+                txtName.Text = selectedRow.Cells["EmpName"].Value.ToString();
+                txtAddress.Text = selectedRow.Cells["EmpAddress"].Value.ToString();
+                txtDateOfBirth.Text = selectedRow.Cells["EmpDob"].Value.ToString();
+                txtPhone.Text = selectedRow.Cells["EmpPhone"].Value.ToString();
+                txtPass.Text = selectedRow.Cells["EmpPass"].Value.ToString();
+            }
         }
     }
 }
