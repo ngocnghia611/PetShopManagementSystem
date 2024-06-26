@@ -18,6 +18,8 @@ namespace PetShopManagementSystem
         private int Stock = 0; // Biến lưu số lượng tồn kho của sản phẩm được chọn
         private int n = 0; // Biến đếm số sản phẩm trong hóa đơn
         private int Total = 0; // Tổng tiền của hóa đơn
+        private int pos = 60; // Biến để định vị trí in các sản phẩm trên hóa đơn
+        private int Grdtotal = 0; // Tổng tiền cuối cùng của hóa đơn
         public Billings()
         {
             InitializeComponent();
@@ -146,50 +148,6 @@ namespace PetShopManagementSystem
         }
 
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Homes homes = new Homes();
-            homes.Show();
-            this.Hide();
-        }
-
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-            Products products = new Products();
-            products.Show();
-            this.Hide();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            Employees employees = new Employees();
-            employees.Show();
-            this.Hide();
-        }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            Customer customer = new Customer();
-            customer.Show();
-            this.Hide();
-        }
-
-        private void btnBill_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to sign out?", "Confirm logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Hide();
-                Login login = new Login();
-                login.ShowDialog();
-            }
-        }
-
         private void btnAddtoBill_Click(object sender, EventArgs e)
         {
             try
@@ -233,7 +191,7 @@ namespace PetShopManagementSystem
             Reset();
         }
 
-        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProducts_SelectionChanged(object sender, EventArgs e)
         {
             try
             {
@@ -259,8 +217,93 @@ namespace PetShopManagementSystem
             {
                 MessageBox.Show($"Error selecting product: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void printDocumentBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Petshop", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(80));
+            e.Graphics.DrawString("ID PRODUCT PRICE QUANTITY TOTAL", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26, 40));
+
+            foreach (DataGridViewRow row in dgvProductBill.Rows)
+            {
+                int prodid = Convert.ToInt32(row.Cells["ID"].Value);
+                string prodname = "" + row.Cells["ProductName"].Value;
+                int prodprice = Convert.ToInt32(row.Cells["Price"].Value);
+                int prodqty = Convert.ToInt32(row.Cells["Quantity"].Value);
+                int total = Convert.ToInt32(row.Cells["Total"].Value);
+                e.Graphics.DrawString("" + prodid, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(26, pos));
+                e.Graphics.DrawString("" + prodname, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(45, pos));
+                e.Graphics.DrawString("" + prodprice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(120, pos));
+                e.Graphics.DrawString("" + prodqty, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(170, pos));
+                e.Graphics.DrawString("" + total, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(235, pos));
+                pos = pos + 20;
+            }
+
+            e.Graphics.DrawString("Grand Total: Rs" + Grdtotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
+            e.Graphics.DrawString("**************Petshop**************", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(80, pos + 85));
+            dgvProductBill.Rows.Clear();
+            dgvProductBill.Refresh();
+            pos = 100;
+            Grdtotal = 0;
+            n = 0;
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            printDocumentBill.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 400, 600);
+            if (printPreviewDialogBill.ShowDialog() == DialogResult.OK)
+            {
+                printDocumentBill.Print();
+            }
+        }
+
+        private void dgvTransactions_SelectionChanged(object sender, EventArgs e)
+        {
 
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Homes homes = new Homes();
+            homes.Show();
+            this.Hide();
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            Products products = new Products();
+            products.Show();
+            this.Hide();
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            Employees employees = new Employees();
+            employees.Show();
+            this.Hide();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.Show();
+            this.Hide();
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to sign out?", "Confirm logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
+        }
     }
 }

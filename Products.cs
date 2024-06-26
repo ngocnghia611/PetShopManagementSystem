@@ -19,6 +19,7 @@ namespace PetShopManagementSystem
         {
             InitializeComponent();
             context = new PetShopManagenentContext();
+
         }
 
         public void LoadProduct()
@@ -27,13 +28,15 @@ namespace PetShopManagementSystem
             {
                 var product = context.Products.Select(p => new
                 {
-                    p.ProductId,
-                    p.ProductName,
-                    p.Category,
-                    p.Quantity,
-                    p.Price
+                    ProductId = (int?)p.ProductId,
+                    ProductName = p.ProductName,
+                    Category = p.Category,
+                    Quantity = (int?)p.Quantity,
+                    Price = (decimal?)p.Price
                 }).ToList();
 
+                // Add a blank row at the end of the list with null or empty values
+                product.Add(new { ProductId = (int?)null, ProductName = "", Category = "", Quantity = (int?)null, Price = (decimal?)null });
                 dgvProduct.DataSource = product;
             }
             catch (Exception ex)
@@ -45,6 +48,7 @@ namespace PetShopManagementSystem
         {
             LoadProduct();
             ClearInput();
+            dgvProduct.SelectionChanged += dgvProduct_SelectionChanged;
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -203,15 +207,31 @@ namespace PetShopManagementSystem
             }
         }
 
-        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProduct_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvProduct.SelectedRows.Count > 0)
+            try
             {
-                var selectedRow = dgvProduct.SelectedRows[0];
-                txtName.Text = selectedRow.Cells["ProductName"].Value.ToString();
-                txtCategory.Text = selectedRow.Cells["Category"].Value.ToString();
-                txtQuantity.Text = selectedRow.Cells["Quantity"].Value.ToString();
-                txtPrice.Text = selectedRow.Cells["Price"].Value.ToString();
+                if (dgvProduct.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dgvProduct.SelectedRows[0];
+
+                    // Check if the selected row is the blank row
+                    if (selectedRow.Cells["ProductName"].Value == null || string.IsNullOrEmpty(selectedRow.Cells["ProductName"].Value.ToString()))
+                    {
+                        ClearInput();
+                    }
+                    else
+                    {
+                        txtName.Text = selectedRow.Cells["ProductName"].Value.ToString();
+                        txtCategory.Text = selectedRow.Cells["Category"].Value.ToString();
+                        txtQuantity.Text = selectedRow.Cells["Quantity"].Value.ToString();
+                        txtPrice.Text = selectedRow.Cells["Price"].Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error selecting product: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

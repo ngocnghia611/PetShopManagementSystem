@@ -31,12 +31,13 @@ namespace PetShopManagementSystem
             {
                 var customer = context.Customers.Select(c => new
                 {
-                    c.CustId,
+                    CustId = (int?)c.CustId,
                     c.CustName,
                     c.CustAddress,
                     c.CustPhone
                 }).ToList();
 
+                customer.Add(new { CustId = (int?)null, CustName = "", CustAddress = "", CustPhone = "" });
                 dgvCustomer.DataSource = customer;
             }
             catch (Exception ex)
@@ -204,12 +205,29 @@ namespace PetShopManagementSystem
 
         private void dgvCustomer_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvCustomer.SelectedRows.Count > 0)
+            try
             {
-                txtName.Text = dgvCustomer.SelectedRows[0].Cells["CustName"].Value.ToString();
-                txtAddress.Text = dgvCustomer.SelectedRows[0].Cells["CustAddress"].Value.ToString();
-                txtPhone.Text = dgvCustomer.SelectedRows[0].Cells["CustPhone"].Value.ToString();
+                if (dgvCustomer.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dgvCustomer.SelectedRows[0];
+                    if (selectedRow.Cells["CustName"].Value == null || string.IsNullOrEmpty(selectedRow.Cells["CustName"].Value.ToString()))
+                    {
+                        ClearInput();
+                    }
+                    else
+                    {
+                        txtName.Text = selectedRow.Cells["CustName"].Value.ToString();
+                        txtAddress.Text = selectedRow.Cells["CustAddress"].Value.ToString();
+                        txtPhone.Text = selectedRow.Cells["CustPhone"].Value.ToString();
+                    }
+                    
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error selecting customer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
     }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PetShopManagementSystem
 {
@@ -19,6 +20,7 @@ namespace PetShopManagementSystem
         {
             InitializeComponent();
             dbContext = new PetShopManagenentContext();
+            
         }
 
         public void LoadEmployees()
@@ -27,7 +29,7 @@ namespace PetShopManagementSystem
             {
                 var employees = dbContext.Employees.Select(e => new
                 {
-                    e.EmpId,
+                    EmpId = (int?)e.EmpId,
                     e.EmpName,
                     e.EmpAddress,
                     EmpDob = e.EmpDob.ToString("yyyy-MM-dd"),
@@ -35,6 +37,7 @@ namespace PetShopManagementSystem
                     e.EmpPass
                 }).ToList();
 
+                employees.Add(new { EmpId = (int?)null, EmpName = "", EmpAddress = "", EmpDob = "", EmpPhone = "", EmpPass = "" });
                 dgvEmployees.DataSource = employees;
             }
             catch (Exception ex)
@@ -47,6 +50,7 @@ namespace PetShopManagementSystem
         {
             LoadEmployees();
             ClearInput();
+            dgvEmployees.SelectionChanged += dgvEmployees_SelectionChanged;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -97,6 +101,7 @@ namespace PetShopManagementSystem
         {
             txtName.Text = string.Empty;
             txtAddress.Text = string.Empty;
+            txtDateOfBirth.Text = string.Empty;
             txtPhone.Text = string.Empty;
             txtPass.Text = string.Empty;
         }
@@ -217,15 +222,32 @@ namespace PetShopManagementSystem
 
         private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvEmployees.SelectedRows.Count > 0)
+            try
             {
-                var selectedRow = dgvEmployees.SelectedRows[0];
-                txtName.Text = selectedRow.Cells["EmpName"].Value.ToString();
-                txtAddress.Text = selectedRow.Cells["EmpAddress"].Value.ToString();
-                txtDateOfBirth.Text = selectedRow.Cells["EmpDob"].Value.ToString();
-                txtPhone.Text = selectedRow.Cells["EmpPhone"].Value.ToString();
-                txtPass.Text = selectedRow.Cells["EmpPass"].Value.ToString();
+                if (dgvEmployees.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dgvEmployees.SelectedRows[0];
+
+                    if (selectedRow.Cells["EmpName"].Value == null || string.IsNullOrEmpty(selectedRow.Cells["EmpName"].Value.ToString()))
+                    {
+                        ClearInput();
+                    }
+                    else
+                    {
+                        txtName.Text = selectedRow.Cells["EmpName"].Value.ToString();
+                        txtAddress.Text = selectedRow.Cells["EmpAddress"].Value.ToString();
+                        txtDateOfBirth.Text = selectedRow.Cells["EmpDob"].Value.ToString();
+                        txtPhone.Text = selectedRow.Cells["EmpPhone"].Value.ToString();
+                        txtPass.Text = selectedRow.Cells["EmpPass"].Value.ToString();
+                    }
+
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error selecting employee: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

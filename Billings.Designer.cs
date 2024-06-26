@@ -106,6 +106,8 @@
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            printDocumentBill = new System.Drawing.Printing.PrintDocument();
+            printPreviewDialogBill = new PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProductBill).BeginInit();
@@ -289,16 +291,16 @@
             panel1.Controls.Add(dgvProducts);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(panel8);
-            panel1.Location = new Point(229, 12);
+            panel1.Location = new Point(227, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1008, 643);
+            panel1.Size = new Size(1195, 643);
             panel1.TabIndex = 39;
             // 
             // Rs
             // 
             Rs.AutoSize = true;
             Rs.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Rs.Location = new Point(800, 340);
+            Rs.Location = new Point(1001, 335);
             Rs.Name = "Rs";
             Rs.Size = new Size(35, 27);
             Rs.TabIndex = 28;
@@ -308,7 +310,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(687, 14);
+            label9.Location = new Point(806, 14);
             label9.Name = "label9";
             label9.Size = new Size(145, 27);
             label9.TabIndex = 27;
@@ -326,18 +328,19 @@
             btnPrint.FillColor = Color.Crimson;
             btnPrint.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPrint.ForeColor = Color.White;
-            btnPrint.Location = new Point(645, 340);
+            btnPrint.Location = new Point(846, 335);
             btnPrint.Name = "btnPrint";
             btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnPrint.Size = new Size(136, 27);
             btnPrint.TabIndex = 26;
             btnPrint.Text = "Print";
+            btnPrint.Click += btnPrint_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(645, 370);
+            label6.Location = new Point(846, 370);
             label6.Name = "label6";
             label6.Size = new Size(150, 27);
             label6.TabIndex = 26;
@@ -355,7 +358,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvProductBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvProductBill.ColumnHeadersHeight = 28;
+            dgvProductBill.ColumnHeadersHeight = 24;
             dgvProductBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(249, 219, 216);
@@ -366,11 +369,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvProductBill.DefaultCellStyle = dataGridViewCellStyle3;
             dgvProductBill.GridColor = Color.FromArgb(245, 192, 188);
-            dgvProductBill.Location = new Point(577, 44);
+            dgvProductBill.Location = new Point(577, 40);
             dgvProductBill.Name = "dgvProductBill";
             dgvProductBill.RowHeadersVisible = false;
             dgvProductBill.RowHeadersWidth = 51;
-            dgvProductBill.Size = new Size(414, 281);
+            dgvProductBill.RowTemplate.Height = 28;
+            dgvProductBill.Size = new Size(608, 281);
             dgvProductBill.TabIndex = 25;
             dgvProductBill.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             dgvProductBill.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 201, 197);
@@ -385,13 +389,13 @@
             dgvProductBill.ThemeStyle.HeaderStyle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvProductBill.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvProductBill.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvProductBill.ThemeStyle.HeaderStyle.Height = 28;
+            dgvProductBill.ThemeStyle.HeaderStyle.Height = 24;
             dgvProductBill.ThemeStyle.ReadOnly = false;
             dgvProductBill.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(249, 219, 216);
             dgvProductBill.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvProductBill.ThemeStyle.RowsStyle.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvProductBill.ThemeStyle.RowsStyle.ForeColor = Color.Black;
-            dgvProductBill.ThemeStyle.RowsStyle.Height = 29;
+            dgvProductBill.ThemeStyle.RowsStyle.Height = 28;
             dgvProductBill.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(239, 135, 125);
             dgvProductBill.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
             // 
@@ -407,7 +411,7 @@
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             dgvTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgvTransactions.ColumnHeadersHeight = 28;
+            dgvTransactions.ColumnHeadersHeight = 24;
             dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.FromArgb(249, 219, 216);
@@ -418,11 +422,12 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dgvTransactions.DefaultCellStyle = dataGridViewCellStyle6;
             dgvTransactions.GridColor = Color.FromArgb(245, 192, 188);
-            dgvTransactions.Location = new Point(577, 400);
+            dgvTransactions.Location = new Point(673, 400);
             dgvTransactions.Name = "dgvTransactions";
             dgvTransactions.RowHeadersVisible = false;
             dgvTransactions.RowHeadersWidth = 51;
-            dgvTransactions.Size = new Size(414, 220);
+            dgvTransactions.RowTemplate.Height = 28;
+            dgvTransactions.Size = new Size(512, 220);
             dgvTransactions.TabIndex = 24;
             dgvTransactions.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             dgvTransactions.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 201, 197);
@@ -437,15 +442,16 @@
             dgvTransactions.ThemeStyle.HeaderStyle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvTransactions.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvTransactions.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvTransactions.ThemeStyle.HeaderStyle.Height = 28;
+            dgvTransactions.ThemeStyle.HeaderStyle.Height = 24;
             dgvTransactions.ThemeStyle.ReadOnly = false;
             dgvTransactions.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(249, 219, 216);
             dgvTransactions.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvTransactions.ThemeStyle.RowsStyle.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvTransactions.ThemeStyle.RowsStyle.ForeColor = Color.Black;
-            dgvTransactions.ThemeStyle.RowsStyle.Height = 29;
+            dgvTransactions.ThemeStyle.RowsStyle.Height = 28;
             dgvTransactions.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(239, 135, 125);
             dgvTransactions.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
+            dgvTransactions.SelectionChanged += dgvTransactions_SelectionChanged;
             // 
             // panel2
             // 
@@ -636,17 +642,17 @@
             dgvProducts.CellBorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.FromArgb(231, 76, 60);
-            dataGridViewCellStyle8.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle8.ForeColor = Color.White;
             dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
             dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dgvProducts.ColumnHeadersHeight = 28;
+            dgvProducts.ColumnHeadersHeight = 24;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = Color.FromArgb(249, 219, 216);
-            dataGridViewCellStyle9.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle9.ForeColor = Color.Black;
             dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(239, 135, 125);
             dataGridViewCellStyle9.SelectionForeColor = Color.Black;
@@ -657,7 +663,8 @@
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersVisible = false;
             dgvProducts.RowHeadersWidth = 51;
-            dgvProducts.Size = new Size(542, 266);
+            dgvProducts.RowTemplate.Height = 28;
+            dgvProducts.Size = new Size(638, 266);
             dgvProducts.TabIndex = 7;
             dgvProducts.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             dgvProducts.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 201, 197);
@@ -669,25 +676,25 @@
             dgvProducts.ThemeStyle.GridColor = Color.FromArgb(245, 192, 188);
             dgvProducts.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(231, 76, 60);
             dgvProducts.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvProducts.ThemeStyle.HeaderStyle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvProducts.ThemeStyle.HeaderStyle.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvProducts.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvProducts.ThemeStyle.HeaderStyle.Height = 28;
+            dgvProducts.ThemeStyle.HeaderStyle.Height = 24;
             dgvProducts.ThemeStyle.ReadOnly = false;
             dgvProducts.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(249, 219, 216);
             dgvProducts.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
-            dgvProducts.ThemeStyle.RowsStyle.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvProducts.ThemeStyle.RowsStyle.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvProducts.ThemeStyle.RowsStyle.ForeColor = Color.Black;
-            dgvProducts.ThemeStyle.RowsStyle.Height = 29;
+            dgvProducts.ThemeStyle.RowsStyle.Height = 28;
             dgvProducts.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(239, 135, 125);
             dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            dgvProducts.CellEndEdit += dgvProducts_CellEndEdit;
+            dgvProducts.SelectionChanged += dgvProducts_SelectionChanged;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(221, 324);
+            label11.Location = new Point(293, 324);
             label11.Name = "label11";
             label11.Size = new Size(108, 27);
             label11.TabIndex = 6;
@@ -807,12 +814,27 @@
             guna2Elipse3.BorderRadius = 35;
             guna2Elipse3.TargetControl = panel2;
             // 
+            // printDocumentBill
+            // 
+            printDocumentBill.PrintPage += printDocumentBill_PrintPage;
+            // 
+            // printPreviewDialogBill
+            // 
+            printPreviewDialogBill.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialogBill.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialogBill.ClientSize = new Size(400, 300);
+            printPreviewDialogBill.Document = printDocumentBill;
+            printPreviewDialogBill.Enabled = true;
+            printPreviewDialogBill.Icon = (Icon)resources.GetObject("printPreviewDialogBill.Icon");
+            printPreviewDialogBill.Name = "printPreviewDialogBill";
+            printPreviewDialogBill.Visible = false;
+            // 
             // Billings
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
-            ClientSize = new Size(1249, 667);
+            ClientSize = new Size(1436, 667);
             Controls.Add(btnHome);
             Controls.Add(btnEmployees);
             Controls.Add(btnCustomer);
@@ -889,5 +911,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAddtoBill;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
+        private System.Drawing.Printing.PrintDocument printDocumentBill;
+        private PrintPreviewDialog printPreviewDialogBill;
     }
 }

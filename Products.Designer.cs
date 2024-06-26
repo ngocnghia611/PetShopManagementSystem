@@ -361,7 +361,7 @@
             dgvProduct.ThemeStyle.RowsStyle.Height = 29;
             dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(239, 135, 125);
             dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            dgvProduct.CellContentClick += dgvProduct_CellContentClick;
+            dgvProduct.SelectionChanged += dgvProduct_SelectionChanged;
             // 
             // panel1
             // 
