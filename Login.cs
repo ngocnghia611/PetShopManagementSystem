@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShopManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace PetShopManagementSystem
     {
         private readonly string adminUser = "sa";
         private readonly string adminPassword = "123";
+        public static string Employee;
+
         public Login()
         {
             InitializeComponent();
@@ -31,28 +34,24 @@ namespace PetShopManagementSystem
                 Homes homes = new Homes();
                 homes.Show();
                 this.Close();
-            }else if (user != null && user != adminUser || password != null && password != adminPassword)
-            {
-                MessageBox.Show("User or Password is incorrect. Please try again!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                //using (var context = new FuminiHotelManagementContext())
-                //{
-                //    var customer = context.Customers
-                //        .FirstOrDefault(c => c.EmailAddress == email && c.Password == password);
-
-                //    if (customer != null)
-                //    {
-                //        MainWindow mainWindow = new MainWindow();
-                //        mainWindow.Show();
-                //        this.Close();
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Email or password is incorrect. Please try again!", "Login failed", MessageBoxButton.OK, MessageBoxImage.Error);
-                //    }
-                //}
+                using (var context = new PetShopManagementContext())
+                {
+                    var employee = context.Employees.FirstOrDefault(emp => emp.EmpName == user && emp.EmpPass == password);
+                    if (employee != null)
+                    {
+                        Login.Employee = employee.EmpName;
+                        Homes homes = new Homes();
+                        homes.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("User or Password is incorrect. Please try again!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 

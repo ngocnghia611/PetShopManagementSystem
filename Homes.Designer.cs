@@ -45,17 +45,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            label4 = new Label();
+            lblFinance = new Label();
             panel11 = new Panel();
-            label3 = new Label();
+            lblBirds = new Label();
             label14 = new Label();
             pictureBox11 = new PictureBox();
             panel10 = new Panel();
-            label1 = new Label();
+            lblCats = new Label();
             label13 = new Label();
             pictureBox10 = new PictureBox();
             panel9 = new Panel();
-            label2 = new Label();
+            lblDogs = new Label();
             label12 = new Label();
             pictureBox9 = new PictureBox();
             label11 = new Label();
@@ -65,7 +65,7 @@
             label8 = new Label();
             pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
-            label7 = new Label();
+            lblEmpName = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -108,34 +108,37 @@
             // guna2CircleProgressBar1
             // 
             guna2CircleProgressBar1.BackColor = Color.Transparent;
-            guna2CircleProgressBar1.Controls.Add(label4);
-            guna2CircleProgressBar1.FillColor = Color.PeachPuff;
+            guna2CircleProgressBar1.Controls.Add(lblFinance);
+            guna2CircleProgressBar1.FillColor = SystemColors.ControlDark;
             guna2CircleProgressBar1.Font = new Font("Segoe UI", 12F);
             guna2CircleProgressBar1.ForeColor = Color.Transparent;
             guna2CircleProgressBar1.Location = new Point(681, 419);
             guna2CircleProgressBar1.Minimum = 0;
             guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
+            guna2CircleProgressBar1.ProgressColor = Color.Gold;
+            guna2CircleProgressBar1.ProgressColor2 = Color.Gold;
             guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar1.Size = new Size(166, 166);
+            guna2CircleProgressBar1.Size = new Size(200, 200);
             guna2CircleProgressBar1.TabIndex = 9;
             guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
+            guna2CircleProgressBar1.Value = 100;
             // 
-            // label4
+            // lblFinance
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.IndianRed;
-            label4.Location = new Point(71, 76);
-            label4.Name = "label4";
-            label4.Size = new Size(32, 23);
-            label4.TabIndex = 8;
-            label4.Text = "RS";
+            lblFinance.AutoSize = true;
+            lblFinance.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFinance.ForeColor = Color.IndianRed;
+            lblFinance.Location = new Point(71, 88);
+            lblFinance.Name = "lblFinance";
+            lblFinance.Size = new Size(32, 23);
+            lblFinance.TabIndex = 8;
+            lblFinance.Text = "RS";
             // 
             // panel11
             // 
             panel11.BackColor = Color.Crimson;
-            panel11.Controls.Add(label3);
+            panel11.Controls.Add(lblBirds);
             panel11.Controls.Add(label14);
             panel11.Controls.Add(pictureBox11);
             panel11.Location = new Point(540, 282);
@@ -143,16 +146,16 @@
             panel11.Size = new Size(450, 117);
             panel11.TabIndex = 8;
             // 
-            // label3
+            // lblBirds
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.Info;
-            label3.Location = new Point(122, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(32, 23);
-            label3.TabIndex = 11;
-            label3.Text = "RS";
+            lblBirds.AutoSize = true;
+            lblBirds.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBirds.ForeColor = SystemColors.Info;
+            lblBirds.Location = new Point(122, 58);
+            lblBirds.Name = "lblBirds";
+            lblBirds.Size = new Size(32, 23);
+            lblBirds.TabIndex = 11;
+            lblBirds.Text = "RS";
             // 
             // label14
             // 
@@ -177,7 +180,7 @@
             // panel10
             // 
             panel10.BackColor = Color.Crimson;
-            panel10.Controls.Add(label1);
+            panel10.Controls.Add(lblCats);
             panel10.Controls.Add(label13);
             panel10.Controls.Add(pictureBox10);
             panel10.Location = new Point(29, 456);
@@ -185,16 +188,16 @@
             panel10.Size = new Size(428, 117);
             panel10.TabIndex = 8;
             // 
-            // label1
+            // lblCats
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.Info;
-            label1.Location = new Point(126, 51);
-            label1.Name = "label1";
-            label1.Size = new Size(32, 23);
-            label1.TabIndex = 9;
-            label1.Text = "RS";
+            lblCats.AutoSize = true;
+            lblCats.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCats.ForeColor = SystemColors.Info;
+            lblCats.Location = new Point(126, 51);
+            lblCats.Name = "lblCats";
+            lblCats.Size = new Size(32, 23);
+            lblCats.TabIndex = 9;
+            lblCats.Text = "RS";
             // 
             // label13
             // 
@@ -219,7 +222,7 @@
             // panel9
             // 
             panel9.BackColor = Color.Crimson;
-            panel9.Controls.Add(label2);
+            panel9.Controls.Add(lblDogs);
             panel9.Controls.Add(label12);
             panel9.Controls.Add(pictureBox9);
             panel9.Location = new Point(29, 282);
@@ -227,16 +230,16 @@
             panel9.Size = new Size(428, 117);
             panel9.TabIndex = 7;
             // 
-            // label2
+            // lblDogs
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.Info;
-            label2.Location = new Point(121, 58);
-            label2.Name = "label2";
-            label2.Size = new Size(32, 23);
-            label2.TabIndex = 10;
-            label2.Text = "RS";
+            lblDogs.AutoSize = true;
+            lblDogs.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDogs.ForeColor = SystemColors.Info;
+            lblDogs.Location = new Point(121, 58);
+            lblDogs.Name = "lblDogs";
+            lblDogs.Size = new Size(32, 23);
+            lblDogs.TabIndex = 10;
+            lblDogs.Text = "RS";
             // 
             // label12
             // 
@@ -330,15 +333,15 @@
             pictureBox7.TabIndex = 4;
             pictureBox7.TabStop = false;
             // 
-            // label7
+            // lblEmpName
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(100, 41);
-            label7.Name = "label7";
-            label7.Size = new Size(112, 23);
-            label7.TabIndex = 4;
-            label7.Text = "EmpName";
+            lblEmpName.AutoSize = true;
+            lblEmpName.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmpName.Location = new Point(100, 41);
+            lblEmpName.Name = "lblEmpName";
+            lblEmpName.Size = new Size(112, 23);
+            lblEmpName.TabIndex = 4;
+            lblEmpName.Text = "EmpName";
             // 
             // guna2Elipse1
             // 
@@ -519,7 +522,7 @@
             Controls.Add(btnBill);
             Controls.Add(btnProduct);
             Controls.Add(btnLogout);
-            Controls.Add(label7);
+            Controls.Add(lblEmpName);
             Controls.Add(pictureBox7);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -554,7 +557,7 @@
         private Panel panel8;
         private PictureBox pictureBox8;
         private PictureBox pictureBox7;
-        private Label label7;
+        private Label lblEmpName;
         private Label label8;
         private Label label10;
         private Label label9;
@@ -572,10 +575,10 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Label label5;
         private PictureBox pictureBox5;
-        private Label label3;
+        private Label lblBirds;
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
-        private Label label4;
+        private Label lblFinance;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
@@ -586,7 +589,7 @@
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private Guna.UI2.WinForms.Guna2Button btnBill;
         private Guna.UI2.WinForms.Guna2Button btnHome;
-        private Label label1;
-        private Label label2;
+        private Label lblCats;
+        private Label lblDogs;
     }
 }

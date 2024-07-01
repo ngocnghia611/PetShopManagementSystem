@@ -13,11 +13,11 @@ namespace PetShopManagementSystem
 {
     public partial class Customer : Form
     {
-        private PetShopManagenentContext context;
+        private PetShopManagementContext context;
         public Customer()
         {
             InitializeComponent();
-            context = new PetShopManagenentContext();
+            context = new PetShopManagementContext();
         }
 
         private void Customer_Load(object sender, EventArgs e)

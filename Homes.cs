@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShopManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,68 @@ namespace PetShopManagementSystem
 {
     public partial class Homes : Form
     {
+        private readonly PetShopManagementContext context;
         public Homes()
         {
             InitializeComponent();
+            context = new PetShopManagementContext();
+            CountDogs();
+            CountBirds();
+            CountCats();
+            Finance();
         }
 
+        private void CountDogs()
+        {
+            try
+            {
+                var dogCount = context.Products.Count(p => p.Category == "Dog");
+                lblDogs.Text = dogCount.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error counting dogs: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CountBirds()
+        {
+            try
+            {
+                var birdCount = context.Products.Count(p => p.Category == "Bird");
+                lblBirds.Text = birdCount.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error counting birds: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CountCats()
+        {
+            try
+            {
+                var catCount = context.Products.Count(p => p.Category == "Cat");
+                lblCats.Text = catCount.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error counting cats: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Finance()
+        {
+            try
+            {
+                var totalAmount = context.Bills.Sum(b => b.Amt);
+                lblFinance.Text = totalAmount.ToString("C"); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error calculating total finance: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
 

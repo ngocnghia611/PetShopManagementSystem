@@ -13,18 +13,19 @@ namespace PetShopManagementSystem
 {
     public partial class Billings : Form
     {
-        private PetShopManagenentContext context;
+        private PetShopManagementContext context;
         private int Key = 0; // Biến lưu ProductId của sản phẩm được chọn
         private int Stock = 0; // Biến lưu số lượng tồn kho của sản phẩm được chọn
         private int n = 0; // Biến đếm số sản phẩm trong hóa đơn
         private int Total = 0; // Tổng tiền của hóa đơn
         private int pos = 60; // Biến để định vị trí in các sản phẩm trên hóa đơn
-        private int Grdtotal = 0; // Tổng tiền cuối cùng của hóa đơn
         public Billings()
         {
             InitializeComponent();
-            context = new PetShopManagenentContext();
+            context = new PetShopManagementContext();
+            lblEmpName.Text = Login.Employee;
         }
+
 
         private void GetCustomer()
         {
@@ -76,6 +77,7 @@ namespace PetShopManagementSystem
             }
         }
 
+
         private void LoadProductBill()
         {
             // Thêm các cột cho DataGridView dgvProductBill
@@ -84,6 +86,27 @@ namespace PetShopManagementSystem
             dgvProductBill.Columns.Add("Quantity", "Quantity");
             dgvProductBill.Columns.Add("Price", "Price");
             dgvProductBill.Columns.Add("Total", "Total");
+        }
+
+        private void LoadTransactionBill()
+        {
+            try
+            {
+                var bill = context.Bills.Select(b => new
+                {
+                    b.BillId,
+                    b.BillDate,
+                    b.CustId,
+                    b.CustName,
+                    b.EmpName,
+                    b.Amt
+                }).ToList();
+                dgvTransactions.DataSource = bill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void UpdateStock()
@@ -144,7 +167,7 @@ namespace PetShopManagementSystem
             GetCustomer();
             LoadProduct();
             LoadProductBill();
-
+            LoadTransactionBill();
         }
 
 
@@ -171,7 +194,7 @@ namespace PetShopManagementSystem
 
                     // Cập nhật tổng tiền của hóa đơn
                     Total += total;
-                    Rs.Text = $"Rs {Total}";
+                    Rs.Text = $"Total: {Total}$";
 
                     // Cập nhật số lượng tồn kho của sản phẩm
                     UpdateStock();
@@ -239,13 +262,11 @@ namespace PetShopManagementSystem
                 pos = pos + 20;
             }
 
-            e.Graphics.DrawString("Grand Total: Rs" + Grdtotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
+            e.Graphics.DrawString("Total: " + Total + "$", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
             e.Graphics.DrawString("**************Petshop**************", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(80, pos + 85));
             dgvProductBill.Rows.Clear();
             dgvProductBill.Refresh();
             pos = 100;
-            Grdtotal = 0;
-            n = 0;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -255,8 +276,13 @@ namespace PetShopManagementSystem
             {
                 printDocumentBill.Print();
             }
+            InsertBill();
         }
 
+        private void InsertBill()
+        {
+            
+        }
         private void dgvTransactions_SelectionChanged(object sender, EventArgs e)
         {
 

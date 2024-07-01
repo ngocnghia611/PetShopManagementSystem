@@ -15,11 +15,11 @@ namespace PetShopManagementSystem
 {
     public partial class Employees : Form
     {
-        private PetShopManagenentContext dbContext;
+        private PetShopManagementContext dbContext;
         public Employees()
         {
             InitializeComponent();
-            dbContext = new PetShopManagenentContext();
+            dbContext = new PetShopManagementContext();
             
         }
 

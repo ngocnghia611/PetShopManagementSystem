@@ -14,11 +14,11 @@ namespace PetShopManagementSystem
 {
     public partial class Products : Form
     {
-        private PetShopManagenentContext context;
+        private PetShopManagementContext context;
         public Products()
         {
             InitializeComponent();
-            context = new PetShopManagenentContext();
+            context = new PetShopManagementContext();
 
         }
 
