@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homes));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -76,7 +74,6 @@
             btnProduct = new Guna.UI2.WinForms.Guna2Button();
             btnBill = new Guna.UI2.WinForms.Guna2Button();
             btnCustomer = new Guna.UI2.WinForms.Guna2Button();
-            btnEmployees = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             guna2CircleProgressBar1.SuspendLayout();
@@ -328,7 +325,7 @@
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(12, 12);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(82, 67);
+            pictureBox7.Size = new Size(211, 67);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 4;
             pictureBox7.TabStop = false;
@@ -336,12 +333,14 @@
             // lblEmpName
             // 
             lblEmpName.AutoSize = true;
-            lblEmpName.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmpName.Location = new Point(100, 41);
+            lblEmpName.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmpName.ImageAlign = ContentAlignment.TopLeft;
+            lblEmpName.Location = new Point(24, 82);
             lblEmpName.Name = "lblEmpName";
-            lblEmpName.Size = new Size(112, 23);
+            lblEmpName.Size = new Size(96, 19);
             lblEmpName.TabIndex = 4;
             lblEmpName.Text = "EmpName";
+            lblEmpName.TextAlign = ContentAlignment.TopCenter;
             // 
             // guna2Elipse1
             // 
@@ -376,7 +375,7 @@
             // btnLogout
             // 
             btnLogout.BorderRadius = 15;
-            btnLogout.CustomizableEdges = customizableEdges12;
+            btnLogout.CustomizableEdges = customizableEdges10;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -389,7 +388,7 @@
             btnLogout.ImageSize = new Size(30, 30);
             btnLogout.Location = new Point(12, 541);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges11;
             btnLogout.Size = new Size(211, 56);
             btnLogout.TabIndex = 13;
             btnLogout.Text = "Logout";
@@ -398,7 +397,7 @@
             // btnProduct
             // 
             btnProduct.BorderRadius = 15;
-            btnProduct.CustomizableEdges = customizableEdges10;
+            btnProduct.CustomizableEdges = customizableEdges8;
             btnProduct.DisabledState.BorderColor = Color.DarkGray;
             btnProduct.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProduct.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -409,10 +408,10 @@
             btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
             btnProduct.ImageAlign = HorizontalAlignment.Left;
             btnProduct.ImageSize = new Size(30, 30);
-            btnProduct.Location = new Point(12, 204);
+            btnProduct.Location = new Point(12, 219);
             btnProduct.Name = "btnProduct";
             btnProduct.PressedDepth = 40;
-            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnProduct.Size = new Size(211, 56);
             btnProduct.TabIndex = 14;
             btnProduct.Text = "Product";
@@ -421,7 +420,7 @@
             // btnBill
             // 
             btnBill.BorderRadius = 15;
-            btnBill.CustomizableEdges = customizableEdges8;
+            btnBill.CustomizableEdges = customizableEdges6;
             btnBill.DisabledState.BorderColor = Color.DarkGray;
             btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -432,10 +431,10 @@
             btnBill.Image = (Image)resources.GetObject("btnBill.Image");
             btnBill.ImageAlign = HorizontalAlignment.Left;
             btnBill.ImageSize = new Size(30, 30);
-            btnBill.Location = new Point(12, 459);
+            btnBill.Location = new Point(12, 395);
             btnBill.Name = "btnBill";
             btnBill.PressedDepth = 40;
-            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnBill.Size = new Size(211, 56);
             btnBill.TabIndex = 15;
             btnBill.Text = "Billing";
@@ -444,7 +443,7 @@
             // btnCustomer
             // 
             btnCustomer.BorderRadius = 15;
-            btnCustomer.CustomizableEdges = customizableEdges6;
+            btnCustomer.CustomizableEdges = customizableEdges4;
             btnCustomer.DisabledState.BorderColor = Color.DarkGray;
             btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -455,37 +454,14 @@
             btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
             btnCustomer.ImageAlign = HorizontalAlignment.Left;
             btnCustomer.ImageSize = new Size(30, 30);
-            btnCustomer.Location = new Point(12, 380);
+            btnCustomer.Location = new Point(12, 308);
             btnCustomer.Name = "btnCustomer";
             btnCustomer.PressedDepth = 40;
-            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnCustomer.Size = new Size(211, 56);
             btnCustomer.TabIndex = 16;
             btnCustomer.Text = "Customer";
             btnCustomer.Click += btnCustomer_Click;
-            // 
-            // btnEmployees
-            // 
-            btnEmployees.BorderRadius = 15;
-            btnEmployees.CustomizableEdges = customizableEdges4;
-            btnEmployees.DisabledState.BorderColor = Color.DarkGray;
-            btnEmployees.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEmployees.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEmployees.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEmployees.FillColor = Color.Crimson;
-            btnEmployees.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEmployees.ForeColor = Color.White;
-            btnEmployees.Image = (Image)resources.GetObject("btnEmployees.Image");
-            btnEmployees.ImageAlign = HorizontalAlignment.Left;
-            btnEmployees.ImageSize = new Size(30, 30);
-            btnEmployees.Location = new Point(12, 293);
-            btnEmployees.Name = "btnEmployees";
-            btnEmployees.PressedDepth = 40;
-            btnEmployees.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            btnEmployees.Size = new Size(211, 56);
-            btnEmployees.TabIndex = 17;
-            btnEmployees.Text = "Employees";
-            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnHome
             // 
@@ -501,7 +477,7 @@
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageSize = new Size(50, 50);
-            btnHome.Location = new Point(12, 112);
+            btnHome.Location = new Point(12, 127);
             btnHome.Name = "btnHome";
             btnHome.PressedDepth = 40;
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges3;
@@ -517,7 +493,6 @@
             BackColor = Color.Crimson;
             ClientSize = new Size(1249, 667);
             Controls.Add(btnHome);
-            Controls.Add(btnEmployees);
             Controls.Add(btnCustomer);
             Controls.Add(btnBill);
             Controls.Add(btnProduct);
@@ -585,7 +560,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnProduct;
-        private Guna.UI2.WinForms.Guna2Button btnEmployees;
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private Guna.UI2.WinForms.Guna2Button btnBill;
         private Guna.UI2.WinForms.Guna2Button btnHome;

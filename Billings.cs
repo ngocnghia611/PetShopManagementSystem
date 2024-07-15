@@ -80,7 +80,6 @@ namespace PetShopManagementSystem
 
         private void LoadProductBill()
         {
-            // Thêm các cột cho DataGridView dgvProductBill
             dgvProductBill.Columns.Add("ID", "ID");
             dgvProductBill.Columns.Add("ProductName", "ProductName");
             dgvProductBill.Columns.Add("Quantity", "Quantity");
@@ -281,7 +280,44 @@ namespace PetShopManagementSystem
 
         private void InsertBill()
         {
-            
+            try
+            {
+                int customerId = Convert.ToInt32(txtCustomerID.SelectedValue);
+
+                var customer = context.Customers.Find(customerId);
+                if (customer == null)
+                {
+                    MessageBox.Show("Customer not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var employee = context.Employees.SingleOrDefault(e => e.EmpName == lblEmpName.Text);
+                if (employee == null)
+                {
+                    MessageBox.Show("Employee not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var newBill = new Bill
+                {
+                    BillDate = DateOnly.FromDateTime(DateTime.Today),
+                    CustId = customerId,
+                    CustName = customer.CustName,
+                    EmpId = employee.EmpId,
+                    EmpName = employee.EmpName,
+                    Amt = Total
+                };
+
+                context.Bills.Add(newBill);
+                context.SaveChanges();
+
+                MessageBox.Show("Bill Saved!!!");
+                LoadTransactionBill();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving bill: {ex.Message}\nInner Exception: {ex.InnerException?.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void dgvTransactions_SelectionChanged(object sender, EventArgs e)
         {
@@ -299,13 +335,6 @@ namespace PetShopManagementSystem
         {
             Products products = new Products();
             products.Show();
-            this.Hide();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            Employees employees = new Employees();
-            employees.Show();
             this.Hide();
         }
 

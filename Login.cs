@@ -31,8 +31,8 @@ namespace PetShopManagementSystem
 
             if (user == adminUser && password == adminPassword)
             {
-                Homes homes = new Homes();
-                homes.Show();
+                Admin admin = new Admin();
+                admin.Show();
                 this.Close();
             }
             else

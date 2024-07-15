@@ -32,6 +32,12 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,12 +48,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -55,12 +55,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -87,11 +81,8 @@
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnHome = new Guna.UI2.WinForms.Guna2Button();
+            btnReport = new Guna.UI2.WinForms.Guna2Button();
             btnEmployees = new Guna.UI2.WinForms.Guna2Button();
-            btnCustomer = new Guna.UI2.WinForms.Guna2Button();
-            btnBill = new Guna.UI2.WinForms.Guna2Button();
-            btnProduct = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             label7 = new Label();
             pictureBox7 = new PictureBox();
@@ -217,7 +208,7 @@
             // 
             btnDelete.BackColor = SystemColors.GradientActiveCaption;
             btnDelete.BorderRadius = 15;
-            btnDelete.CustomizableEdges = customizableEdges13;
+            btnDelete.CustomizableEdges = customizableEdges7;
             btnDelete.DisabledState.BorderColor = Color.DarkGray;
             btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -227,7 +218,7 @@
             btnDelete.ForeColor = Color.White;
             btnDelete.Location = new Point(598, 205);
             btnDelete.Name = "btnDelete";
-            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnDelete.Size = new Size(136, 39);
             btnDelete.TabIndex = 20;
             btnDelete.Text = "Delete";
@@ -237,7 +228,7 @@
             // 
             btnEdit.BackColor = SystemColors.GradientActiveCaption;
             btnEdit.BorderRadius = 15;
-            btnEdit.CustomizableEdges = customizableEdges15;
+            btnEdit.CustomizableEdges = customizableEdges9;
             btnEdit.DisabledState.BorderColor = Color.DarkGray;
             btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -247,7 +238,7 @@
             btnEdit.ForeColor = Color.White;
             btnEdit.Location = new Point(419, 205);
             btnEdit.Name = "btnEdit";
-            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnEdit.Size = new Size(136, 39);
             btnEdit.TabIndex = 19;
             btnEdit.Text = "Edit";
@@ -257,7 +248,7 @@
             // 
             btnSave.BackColor = SystemColors.GradientActiveCaption;
             btnSave.BorderRadius = 15;
-            btnSave.CustomizableEdges = customizableEdges17;
+            btnSave.CustomizableEdges = customizableEdges11;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -267,7 +258,7 @@
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(238, 205);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnSave.Size = new Size(136, 39);
             btnSave.TabIndex = 18;
             btnSave.Text = "Save";
@@ -287,21 +278,21 @@
             // 
             txtDateOfBirth.BorderRadius = 20;
             txtDateOfBirth.Checked = true;
-            txtDateOfBirth.CustomizableEdges = customizableEdges19;
+            txtDateOfBirth.CustomizableEdges = customizableEdges13;
             txtDateOfBirth.Font = new Font("Segoe UI", 9F);
             txtDateOfBirth.Format = DateTimePickerFormat.Long;
             txtDateOfBirth.Location = new Point(652, 123);
             txtDateOfBirth.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txtDateOfBirth.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txtDateOfBirth.Name = "txtDateOfBirth";
-            txtDateOfBirth.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtDateOfBirth.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtDateOfBirth.Size = new Size(250, 45);
             txtDateOfBirth.TabIndex = 16;
             txtDateOfBirth.Value = new DateTime(2024, 6, 15, 11, 21, 6, 23);
             // 
             // txtName
             // 
-            txtName.CustomizableEdges = customizableEdges21;
+            txtName.CustomizableEdges = customizableEdges15;
             txtName.DefaultText = "";
             txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -316,13 +307,13 @@
             txtName.PasswordChar = '\0';
             txtName.PlaceholderText = "";
             txtName.SelectedText = "";
-            txtName.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtName.Size = new Size(204, 28);
             txtName.TabIndex = 15;
             // 
             // txtPass
             // 
-            txtPass.CustomizableEdges = customizableEdges23;
+            txtPass.CustomizableEdges = customizableEdges17;
             txtPass.DefaultText = "";
             txtPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPass.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -337,13 +328,13 @@
             txtPass.PasswordChar = '\0';
             txtPass.PlaceholderText = "";
             txtPass.SelectedText = "";
-            txtPass.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtPass.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtPass.Size = new Size(215, 28);
             txtPass.TabIndex = 14;
             // 
             // txtPhone
             // 
-            txtPhone.CustomizableEdges = customizableEdges25;
+            txtPhone.CustomizableEdges = customizableEdges19;
             txtPhone.DefaultText = "";
             txtPhone.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPhone.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -358,13 +349,13 @@
             txtPhone.PasswordChar = '\0';
             txtPhone.PlaceholderText = "";
             txtPhone.SelectedText = "";
-            txtPhone.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtPhone.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtPhone.Size = new Size(215, 28);
             txtPhone.TabIndex = 13;
             // 
             // txtAddress
             // 
-            txtAddress.CustomizableEdges = customizableEdges27;
+            txtAddress.CustomizableEdges = customizableEdges21;
             txtAddress.DefaultText = "";
             txtAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -379,7 +370,7 @@
             txtAddress.PasswordChar = '\0';
             txtAddress.PlaceholderText = "";
             txtAddress.SelectedText = "";
-            txtAddress.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtAddress.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtAddress.Size = new Size(248, 118);
             txtAddress.TabIndex = 12;
             // 
@@ -460,28 +451,28 @@
             // 
             guna2Elipse7.BorderRadius = 35;
             // 
-            // btnHome
+            // btnReport
             // 
-            btnHome.BorderRadius = 15;
-            btnHome.CustomizableEdges = customizableEdges1;
-            btnHome.DisabledState.BorderColor = Color.DarkGray;
-            btnHome.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnHome.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnHome.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnHome.FillColor = Color.Crimson;
-            btnHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnHome.ForeColor = Color.White;
-            btnHome.Image = (Image)resources.GetObject("btnHome.Image");
-            btnHome.ImageAlign = HorizontalAlignment.Left;
-            btnHome.ImageSize = new Size(50, 50);
-            btnHome.Location = new Point(12, 112);
-            btnHome.Name = "btnHome";
-            btnHome.PressedDepth = 40;
-            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnHome.Size = new Size(211, 56);
-            btnHome.TabIndex = 26;
-            btnHome.Text = "Home";
-            btnHome.Click += btnHome_Click;
+            btnReport.BorderRadius = 15;
+            btnReport.CustomizableEdges = customizableEdges1;
+            btnReport.DisabledState.BorderColor = Color.DarkGray;
+            btnReport.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnReport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnReport.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnReport.FillColor = Color.Crimson;
+            btnReport.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReport.ForeColor = Color.White;
+            btnReport.Image = (Image)resources.GetObject("btnReport.Image");
+            btnReport.ImageAlign = HorizontalAlignment.Left;
+            btnReport.ImageSize = new Size(50, 50);
+            btnReport.Location = new Point(12, 149);
+            btnReport.Name = "btnReport";
+            btnReport.PressedDepth = 40;
+            btnReport.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnReport.Size = new Size(211, 56);
+            btnReport.TabIndex = 26;
+            btnReport.Text = "Report";
+            btnReport.Click += btnReport_Click;
             // 
             // btnEmployees
             // 
@@ -497,7 +488,7 @@
             btnEmployees.Image = (Image)resources.GetObject("btnEmployees.Image");
             btnEmployees.ImageAlign = HorizontalAlignment.Left;
             btnEmployees.ImageSize = new Size(30, 30);
-            btnEmployees.Location = new Point(12, 293);
+            btnEmployees.Location = new Point(12, 237);
             btnEmployees.Name = "btnEmployees";
             btnEmployees.PressedDepth = 40;
             btnEmployees.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -506,79 +497,10 @@
             btnEmployees.Text = "Employees";
             btnEmployees.Click += btnEmployees_Click;
             // 
-            // btnCustomer
-            // 
-            btnCustomer.BorderRadius = 15;
-            btnCustomer.CustomizableEdges = customizableEdges5;
-            btnCustomer.DisabledState.BorderColor = Color.DarkGray;
-            btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCustomer.FillColor = Color.Crimson;
-            btnCustomer.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCustomer.ForeColor = Color.White;
-            btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
-            btnCustomer.ImageAlign = HorizontalAlignment.Left;
-            btnCustomer.ImageSize = new Size(30, 30);
-            btnCustomer.Location = new Point(12, 380);
-            btnCustomer.Name = "btnCustomer";
-            btnCustomer.PressedDepth = 40;
-            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnCustomer.Size = new Size(211, 56);
-            btnCustomer.TabIndex = 24;
-            btnCustomer.Text = "Customer";
-            btnCustomer.Click += btnCustomer_Click;
-            // 
-            // btnBill
-            // 
-            btnBill.BorderRadius = 15;
-            btnBill.CustomizableEdges = customizableEdges7;
-            btnBill.DisabledState.BorderColor = Color.DarkGray;
-            btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBill.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBill.FillColor = Color.Crimson;
-            btnBill.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBill.ForeColor = Color.White;
-            btnBill.Image = (Image)resources.GetObject("btnBill.Image");
-            btnBill.ImageAlign = HorizontalAlignment.Left;
-            btnBill.ImageSize = new Size(30, 30);
-            btnBill.Location = new Point(12, 459);
-            btnBill.Name = "btnBill";
-            btnBill.PressedDepth = 40;
-            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnBill.Size = new Size(211, 56);
-            btnBill.TabIndex = 23;
-            btnBill.Text = "Billing";
-            btnBill.Click += btnBill_Click;
-            // 
-            // btnProduct
-            // 
-            btnProduct.BorderRadius = 15;
-            btnProduct.CustomizableEdges = customizableEdges9;
-            btnProduct.DisabledState.BorderColor = Color.DarkGray;
-            btnProduct.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnProduct.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnProduct.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnProduct.FillColor = Color.Crimson;
-            btnProduct.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProduct.ForeColor = Color.White;
-            btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
-            btnProduct.ImageAlign = HorizontalAlignment.Left;
-            btnProduct.ImageSize = new Size(30, 30);
-            btnProduct.Location = new Point(12, 204);
-            btnProduct.Name = "btnProduct";
-            btnProduct.PressedDepth = 40;
-            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnProduct.Size = new Size(211, 56);
-            btnProduct.TabIndex = 22;
-            btnProduct.Text = "Product";
-            btnProduct.Click += btnProduct_Click;
-            // 
             // btnLogout
             // 
             btnLogout.BorderRadius = 15;
-            btnLogout.CustomizableEdges = customizableEdges11;
+            btnLogout.CustomizableEdges = customizableEdges5;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -591,7 +513,7 @@
             btnLogout.ImageSize = new Size(30, 30);
             btnLogout.Location = new Point(12, 541);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnLogout.Size = new Size(211, 56);
             btnLogout.TabIndex = 21;
             btnLogout.Text = "Logout";
@@ -623,11 +545,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
             ClientSize = new Size(1249, 667);
-            Controls.Add(btnHome);
+            Controls.Add(btnReport);
             Controls.Add(btnEmployees);
-            Controls.Add(btnCustomer);
-            Controls.Add(btnBill);
-            Controls.Add(btnProduct);
             Controls.Add(btnLogout);
             Controls.Add(label7);
             Controls.Add(pictureBox7);
@@ -676,11 +595,8 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker txtDateOfBirth;
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
         private Label label12;
-        private Guna.UI2.WinForms.Guna2Button btnHome;
+        private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button btnEmployees;
-        private Guna.UI2.WinForms.Guna2Button btnCustomer;
-        private Guna.UI2.WinForms.Guna2Button btnBill;
-        private Guna.UI2.WinForms.Guna2Button btnProduct;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Label label7;
         private PictureBox pictureBox7;

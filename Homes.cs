@@ -18,6 +18,7 @@ namespace PetShopManagementSystem
         {
             InitializeComponent();
             context = new PetShopManagementContext();
+            lblEmpName.Text = Login.Employee;
             CountDogs();
             CountBirds();
             CountCats();
@@ -68,7 +69,7 @@ namespace PetShopManagementSystem
             try
             {
                 var totalAmount = context.Bills.Sum(b => b.Amt);
-                lblFinance.Text = totalAmount.ToString("C"); 
+                lblFinance.Text = totalAmount.ToString("C");
             }
             catch (Exception ex)
             {
@@ -85,14 +86,6 @@ namespace PetShopManagementSystem
             Products products = new Products();
             products.Show();
             this.Hide();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            Employees employees = new Employees();
-            employees.Show(); 
-            this.Hide();
-
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)

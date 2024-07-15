@@ -1,7 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Summer 2024\\PRN212\\Project\\GitHub\\PetShopManagementSystem\\",
-  "Documents": [],
+  "WorkspaceRootPath": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|e:\\summer 2024\\prn212\\project01\\petshopmanagementsystem-main\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|e:\\summer 2024\\prn212\\project01\\petshopmanagementsystem-main\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|e:\\summer 2024\\prn212\\project01\\petshopmanagementsystem-main\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|e:\\summer 2024\\prn212\\project01\\petshopmanagementsystem-main\\homes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{777B2CAA-BE78-4E6C-84B7-AA8C9E564A66}|PetShopManagementSystem.csproj|solutionrelative:homes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +47,55 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Admin.cs",
+              "RelativeDocumentMoniker": "Admin.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Admin.cs",
+              "RelativeToolTip": "Admin.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAASwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:44:44.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Employees.cs [Design]",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Employees.cs",
+              "RelativeDocumentMoniker": "Employees.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Employees.cs [Design]",
+              "RelativeToolTip": "Employees.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:42:33.052Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Homes.cs [Design]",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Homes.cs",
+              "RelativeDocumentMoniker": "Homes.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Homes.cs [Design]",
+              "RelativeToolTip": "Homes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:35:39.288Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin.cs [Design]",
+              "DocumentMoniker": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Admin.cs",
+              "RelativeDocumentMoniker": "Admin.cs",
+              "ToolTip": "E:\\Summer 2024\\PRN212\\Project01\\PetShopManagementSystem-main\\Admin.cs [Design]",
+              "RelativeToolTip": "Admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:33:58.484Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

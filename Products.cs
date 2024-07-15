@@ -19,7 +19,7 @@ namespace PetShopManagementSystem
         {
             InitializeComponent();
             context = new PetShopManagementContext();
-
+            lblEmpName.Text = Login.Employee;
         }
 
         public void LoadProduct()
@@ -60,13 +60,6 @@ namespace PetShopManagementSystem
         private void btnProduct_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            Employees employees = new Employees();
-            employees.Show();
-            this.Hide();
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)

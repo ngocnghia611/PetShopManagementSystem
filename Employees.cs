@@ -20,7 +20,7 @@ namespace PetShopManagementSystem
         {
             InitializeComponent();
             dbContext = new PetShopManagementContext();
-            
+
         }
 
         public void LoadEmployees()
@@ -53,37 +53,17 @@ namespace PetShopManagementSystem
             dgvEmployees.SelectionChanged += dgvEmployees_SelectionChanged;
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
-            Homes homes = new Homes();
-            homes.Show();
+            Admin admin = new Admin();
+            admin.Show();
             this.Hide();
         }
 
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-            Products products = new Products();
-            products.Show();
-            this.Hide();
-        }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            Customer customer = new Customer();
-            customer.Show();
-            this.Hide();
-        }
-
-        private void btnBill_Click(object sender, EventArgs e)
-        {
-            Billings billings = new Billings();
-            billings.Show();
-            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -108,7 +88,7 @@ namespace PetShopManagementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtName.Text == "" || txtAddress.Text == "" || txtDateOfBirth.Text == "" || txtPhone.Text == "" || txtPass.Text == "")
+            if (txtName.Text == "" || txtAddress.Text == "" || txtDateOfBirth.Text == "" || txtPhone.Text == "" || txtPass.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -136,7 +116,7 @@ namespace PetShopManagementSystem
                     MessageBox.Show(ex.Message);
                 }
             }
-            
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -247,7 +227,9 @@ namespace PetShopManagementSystem
             {
                 MessageBox.Show($"Error selecting employee: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
+
+        
     }
 }
